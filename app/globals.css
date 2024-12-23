@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --firstbg:#eee;
+  --secondbg:#e0dfdf;
+  --inputbg:#323846;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+.bgdl{
+  background-color: var(--background);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li{
+  cursor: pointer;
+  padding: 3px;
+}
+nav ul li:hover{
+  color: #01f3f4;
+  transition: 0.3s;
+  background-color: #323846;
+}
+
+input[type = "text"],input[type = "email"]{
+  padding: 10px;
+  border-radius: 5px;
+}
+input:focus{
+  outline: none;
+}
+textarea{
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+}
+
+.mm{
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.imgview{
+  filter: drop-shadow(0 0 2em #01f3f4);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
