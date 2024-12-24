@@ -14,7 +14,7 @@ export default function Navbar() {
           Mohamed.
         </Link>
         <ul className="md:flex hidden gap-4">
-          <li href="/">about</li>
+          <li href="/About">about</li>
           <li href="/">Services</li>
           <li href="/">latest work</li>
           <li href="/">Content</li>
@@ -32,11 +32,11 @@ export default function Navbar() {
               d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
-        <ul className={`absolute top-8 text-center mx-auto left-0 border-b-2 border-b-white/50 md:hidden overflow-hidden ${open ? `` : 'hidden' } dark:bg-[#232730] p-2 rounded-sm w-full gap-4`}>
-          <li>about</li>
-          <li>Services</li>
-          <li>latest work</li>
-          <li>Content</li>
+        <ul className={`absolute top-8 mx-auto left-0 border-b-2 border-b-white/50 md:hidden overflow-hidden ${open ? `` : 'hidden' } p-2 rounded-sm w-full gap-4`}>
+          <li className="hover:bg-[#323846]">about</li>
+          <li className="hover:bg-[#323846]">Services</li>
+          <li className="hover:bg-[#323846]">latest work</li>
+          <li className="hover:bg-[#323846]">Content</li>
         </ul>
      </div>
     </nav>

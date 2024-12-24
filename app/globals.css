@@ -34,9 +34,7 @@ nav ul li{
 nav ul li:hover{
   color: #01f3f4;
   transition: 0.3s;
-  background-color: #323846;
 }
-
 input[type = "text"],input[type = "email"]{
   padding: 10px;
   border-radius: 5px;
@@ -49,11 +47,6 @@ textarea{
   border-radius: 5px;
   resize: none;
 }
-
-.mm{
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-}
-
 #app {
   height: 100%;
 }

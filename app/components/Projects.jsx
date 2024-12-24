@@ -24,6 +24,18 @@ function Projects() {
         <div className='bg-[#20242d] rounded-md overflow-hidden text-center'>
             <Link href="https://next-krye83eln-mohamed-hassans-projects-32952eb6.vercel.app/"><img src="tow.jpg" alt="six" /></Link>
         </div>
+        <div className='bg-[#20242d] rounded-md overflow-hidden text-center'>
+            <Link href="https://2mohamedhssan.github.io/Clipboard/"><img src="clipbord.png" alt="esven" /></Link>
+        </div>
+        <div className='bg-[#20242d] rounded-md overflow-hidden text-center'>
+            <Link href="https://2mohamedhssan.github.io/Kasper-Design/"><img src="kasper.png" alt="eaght" /></Link>
+        </div>
+        <div className='bg-[#20242d] rounded-md overflow-hidden text-center'>
+            <Link href="https://2mohamedhssan.github.io/First-Software-design/"><img src="profirst.png" alt="eaght" /></Link>
+        </div>
+        <div className='bg-[#20242d] rounded-md overflow-hidden text-center'>
+            <Link href="https://2mohamedhssan.github.io/Awesome-Design/"><img src="tempthree.png" alt="eaght" /></Link>
+        </div>
 
       </div>
     </div>
