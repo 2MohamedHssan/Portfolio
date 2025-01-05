@@ -23,7 +23,7 @@ export default function Header() {
                         <FaGithub color="#01f3f4" />
                     </a>
                 </div>
-                <Link href="/MohamedHassanCV.pdf" target="_blank" className="bg-[#01f3f4] imgview hover:bg-[#01f4f4ab] rounded-md mt-4 px-4 py-2 block w-fit">Download CV</Link>
+                <Link href="/MohamedCV.pdf" target="_blank" className="bg-[#01f3f4] imgview hover:bg-[#01f4f4ab] rounded-md mt-4 px-4 py-2 block w-fit">Download CV</Link>
             </div>
             <div className=" hidden md:flex items-center imgview overflow-hidden justify-center rounded-lg border-8 border-teal-400 rotate-6 w-72 h-72">
                 <div className="rounded-lg border-8 z-20 flex justify-center items-center border-teal-400 w-64 h-64">
