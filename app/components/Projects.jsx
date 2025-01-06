@@ -2,7 +2,7 @@ import Link from "next/link"
 
 function Projects() {
   return (
-    <section>
+    <section id="project">
         <div className='dark:bg-[#323846] dark:text-white bg-second-bg py-16'>
       <h1 className='text-3xl font-bold pb-16 text-center'>Latest <span className='text-[#01f3f4]'>Project</span></h1>
       <div className='grid grid-cols-1 container mx-auto p-3 sm:grid-cols-2 md:grid-cols-3 gap-5'>

@@ -16,7 +16,7 @@ export default function Header() {
                     <a href="https://www.facebook.com/profile.php?id=100043988671187" target="_blank" rel="noopener noreferrer">
                         <FaFacebook color="#01f3f4" />
                     </a>
-                    <a href="linkedin.com/in/mohamed-hassan-9330a4234" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/mohamed-hassan-9330a4234/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin color="#01f3f4" />
                     </a>
                     <a href="https://github.com/2MohamedHssan" target="_blank" rel="noopener noreferrer">

@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-      <div className='dark:bg-[#20242d] dark:text-white bg-secondbg py-16'>
+      <div id="content" className='dark:bg-[#20242d] dark:text-white bg-secondbg py-16'>
         <h1 className='text-3xl font-bold pb-16 text-center'>Contact <span className='text-[#01f3f4]'>Me!</span></h1>    
         <form className="max-w-[800px] mx-auto text-center">
             <div className='grid grid-cols-1 container mx-auto p-3 sm:grid-cols-2 gap-5'>

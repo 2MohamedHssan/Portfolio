@@ -4,7 +4,7 @@ import { BsPalette} from 'react-icons/bs';
 
 export default function Serves() {
   return (
-    <div className='dark:bg-[#20242d] bg-secondbg dark:text-white/80 py-16'>
+    <div id='servecis' className='dark:bg-[#20242d] bg-secondbg dark:text-white/80 py-16'>
       <h1 className='text-3xl font-bold pb-16 text-center dark:text-white'>Our <span className='text-[#01f3f4]'>Services</span></h1>
       <div className='grid grid-cols-1 container mx-auto p-3 sm:grid-cols-2 md:grid-cols-3 gap-5'>
         <div className='dark:bg-[#323846] bg-white rounded-md p-4 text-center'>

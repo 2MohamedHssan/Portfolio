@@ -8,16 +8,16 @@ export default function Navbar() {
     setOpen(!open)
   }
   return (
-    <nav className={`${!open ? 'h-[50px]': 'h-[150px]'} duration-500 dark:bg-[#20242d] bg-firstbg dark:text-white text-black font-[family-name:var(--font-geist-sans)]`}>
+    <nav className={`${!open ? 'h-[50px]': 'h-[150px]'} fixed top-0 z-50 w-full duration-500 dark:bg-[#20242d] bg-firstbg dark:text-white text-black font-[family-name:var(--font-geist-sans)]`}>
      <div className="flex p-2 justify-between items-center container mx-auto">
       <Link href="/">
           Mohamed.
         </Link>
         <ul className="md:flex hidden gap-4">
-          <li href="/About">about</li>
-          <li href="/">Services</li>
-          <li href="/">latest work</li>
-          <li href="/">Content</li>
+          <Link href="#About">about</Link>
+          <Link href="#servecis">Services</Link>
+          <Link href="#project">latest Project</Link>
+          <Link href="#content">Content Us</Link>
         </ul>
         <button onClick={openMenuo} title="compo" className="btn md:hidden btn-square btn-ghost">
           <svg
