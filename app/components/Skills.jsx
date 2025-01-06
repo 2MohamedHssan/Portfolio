@@ -10,9 +10,9 @@ import { SiTailwindcss, SiTypescript, SiNextdotjs, SiGraphql, SiBootstrap } from
 
 function Skills() {
   return (
-    <div className="py-20 dark:bg-[#20242d] dark:text-white bg-fisrtbg">
+    <div className="py-20 bg-[#20242d] text-white bg-fisrtbg">
       <h1 className="text-3xl font-bold pb-16 text-center">Skills</h1>
-      <div className="container mx-auto">
+      <div data-aos="fade-up" className="container mx-auto">
         <Swiper
           modules={[Autoplay]}
           slidesPerView={4}

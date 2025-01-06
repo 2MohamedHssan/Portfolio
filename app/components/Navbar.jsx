@@ -8,7 +8,7 @@ export default function Navbar() {
     setOpen(!open)
   }
   return (
-    <nav className={`${!open ? 'h-[50px]': 'h-[150px]'} fixed top-0 z-50 w-full duration-500 dark:bg-[#20242d] bg-firstbg dark:text-white text-black font-[family-name:var(--font-geist-sans)]`}>
+    <nav className={`${!open ? 'h-[50px]': 'h-[150px]'} fixed top-0 z-50 w-full duration-500 bg-[#20242d] text-white font-[family-name:var(--font-geist-sans)]`}>
      <div className="flex p-2 justify-between items-center container mx-auto">
       <Link href="/">
           Mohamed.
