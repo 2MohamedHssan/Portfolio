@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -8,16 +9,16 @@ export default function Navbar() {
     setOpen(!open)
   }
   return (
-    <nav className={`${!open ? 'h-[50px]': 'h-[150px]'} fixed top-0 z-50 w-full duration-500 bg-[#20242d] text-white font-[family-name:var(--font-geist-sans)]`}>
-     <div className="flex p-2 justify-between items-center container mx-auto">
+    <nav className={`${!open ? 'h-[50px]': 'h-[240px]'} fixed top-0 z-50 w-full duration-500 bg-[#20242d] text-white font-[family-name:var(--font-geist-sans)]`}>
+     <div className="flex px-2 justify-between items-center container mx-auto">
       <Link href="/">
-          Mohamed.
+          <Image src="/logo_transparent.png" width={50} priority height={50} alt="logo" />
         </Link>
         <ul className="md:flex hidden gap-4">
-          <Link href="#About">about</Link>
-          <Link href="#servecis">Services</Link>
-          <Link href="#project">latest Project</Link>
-          <Link href="#content">Content Us</Link>
+          <Link href="#About" className="hover:text-teal-300">about</Link>
+          <Link href="#servecis" className="hover:text-teal-300">Services</Link>
+          <Link href="#project" className="hover:text-teal-300">latest Project</Link>
+          <Link href="#content" className="hover:text-teal-300">Content Us</Link>
         </ul>
         <button onClick={openMenuo} title="compo" className="btn md:hidden btn-square btn-ghost">
           <svg
@@ -32,11 +33,11 @@ export default function Navbar() {
               d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
-        <ul className={`absolute top-8 mx-auto left-0 border-b-2 border-b-white/50 md:hidden overflow-hidden ${open ? `` : 'hidden' } p-2 rounded-sm w-full gap-4`}>
-          <li className="hover:bg-[#323846]">about</li>
-          <li className="hover:bg-[#323846]">Services</li>
-          <li className="hover:bg-[#323846]">latest work</li>
-          <li className="hover:bg-[#323846]">Content</li>
+        <ul className={`absolute top-12 mx-auto flex flex-col left-0 md:hidden overflow-hidden ${open ? `` : 'hidden' } p-2 rounded-sm w-full gap-2`}>
+          <Link href="#About" className="hover:bg-[#323846] p-2">about</Link>
+          <Link href="#servecis" className="hover:bg-[#323846] p-2">Services</Link>
+          <Link href="#project" className="hover:bg-[#323846] p-2">latest Project</Link>
+          <Link href="#content" className="hover:bg-[#323846] p-2">Content Us</Link>
         </ul>
      </div>
     </nav>

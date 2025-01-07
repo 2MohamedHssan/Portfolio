@@ -10,6 +10,7 @@ import Certifecation from "./components/Certifecation";
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import AOS from 'aos';
+import Head from "next/head";
 
 export default function Home() {
   useEffect(() => {
@@ -21,6 +22,9 @@ export default function Home() {
   }, []);
   return (
     <div className=" font-[family-name:var(--font-geist-sans)]">
+      <Head>
+        <title>Mohamed Hassan</title>
+      </Head>
       <Header/>
       <About/>
       <Skills/>

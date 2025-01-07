@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
+import { SiPhp,SiMysql } from "react-icons/si";
 import { DiHtml5, DiCss3, DiJsBadge, DiReact, DiNodejs } from 'react-icons/di';
 import { SiTailwindcss, SiTypescript, SiNextdotjs, SiGraphql, SiBootstrap } from 'react-icons/si';
 
@@ -29,6 +30,8 @@ function Skills() {
           <SwiperSlide><DiHtml5 color="#e34c26" size={80} /></SwiperSlide>
           <SwiperSlide><DiCss3 color="#1572b6" size={80} /></SwiperSlide>
           <SwiperSlide><DiJsBadge color="#f7df1e" size={80} /></SwiperSlide>
+          <SwiperSlide><SiPhp color="#4F5D95" size={80} /></SwiperSlide>
+          <SwiperSlide><SiMysql color="#00758F" size={80} /></SwiperSlide>
           <SwiperSlide><DiReact color="#61dbfb" size={80} /></SwiperSlide>
           <SwiperSlide><DiNodejs color="#8cc84b" size={80} /></SwiperSlide>
           <SwiperSlide><SiTailwindcss color="#38B2AC" size={80} /></SwiperSlide>
