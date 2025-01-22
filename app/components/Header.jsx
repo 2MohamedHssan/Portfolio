@@ -12,7 +12,7 @@ export default function Header() {
                 <h1 data-aos="zoom-in" className="text-3xl font-bold">Mohamed Hassan</h1>
                 <p data-aos="zoom-in"><span className="text-[#01f3f4] font-bold text-xl"><Typewriter
                     words={['I am a Frontend Developer', 'I build responsive websites', 'Skilled in building server-side rendered apps with Next.js']}
-                    loop={5}
+                    loop={Infinity}
                     cursor
                     cursorStyle="|"
                     typeSpeed={70}
