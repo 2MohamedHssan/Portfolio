@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { Typewriter } from 'react-simple-typewriter';
+
+
 import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 export default function Header() {
   return (
@@ -7,11 +10,19 @@ export default function Header() {
             <div >
                 <p data-aos="fade-right">Hello, It's Me</p> 
                 <h1 data-aos="zoom-in" className="text-3xl font-bold">Mohamed Hassan</h1>
-                <p data-aos="zoom-in">I'm A <span className="text-[#01f3f4] font-bold text-xl">Front End Developer</span></p>
+                <p data-aos="zoom-in"><span className="text-[#01f3f4] font-bold text-xl"><Typewriter
+                    words={['I am a Frontend Developer', 'I build responsive websites', 'Skilled in building server-side rendered apps with Next.js']}
+                    loop={5}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                    /></span></p>
                 <p data-aos="zoom-in" className="md:max-w-64 lg:max-w-full">
                     with a passion for creating responsive and
                     user-friendly websites.
-                </p>
+                    </p>
                 <div data-aos="fade-up" className="flex gap-3 text-xl mt-4">
                     <a href="https://www.facebook.com/profile.php?id=100043988671187" target="_blank" rel="noopener noreferrer">
                         <FaFacebook color="#01f3f4" />

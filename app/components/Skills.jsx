@@ -13,7 +13,7 @@ function Skills() {
   return (
     <div className="py-20 bg-[#20242d] text-white bg-fisrtbg">
       <h1 className="text-3xl font-bold pb-16 text-center">Skills</h1>
-      <div data-aos="fade-up" className="container mx-auto">
+      <div data-aos="fade-down" className="container mx-auto">
         <Swiper
           modules={[Autoplay]}
           slidesPerView={4}
@@ -27,7 +27,7 @@ function Skills() {
           className="mySwiper"
           speed={1000}
           grabCursor={true}>
-          <SwiperSlide><DiHtml5 color="#e34c26" size={80} /></SwiperSlide>
+          <SwiperSlide><DiHtml5 color="#e34c26" size  ={80} /></SwiperSlide>
           <SwiperSlide><DiCss3 color="#1572b6" size={80} /></SwiperSlide>
           <SwiperSlide><DiJsBadge color="#f7df1e" size={80} /></SwiperSlide>
           <SwiperSlide><SiPhp color="#4F5D95" size={80} /></SwiperSlide>

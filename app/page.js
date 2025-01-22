@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import Head from "next/head";
+import Experince from "./components/Experince";
 
 export default function Home() {
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function Home() {
       </Head>
       <Header/>
       <About/>
+      <Experince />
       <Skills/>
       <Certifecation />
       <Serves/>
