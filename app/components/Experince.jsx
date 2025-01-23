@@ -9,9 +9,9 @@ function Experince() {
   const { ref: awardsRef, inView: awardsInView } = useInView({ triggerOnce: true });
 
   return (
-    <div className='bg-[#323846] bg-fixed relative py-20 h-screen' style={{backgroundImage:`url('/seven.jpg')`, backgroundSize:'cover',backgroundPosition:'center'}}>
+    <div className='bg-[#323846] bg-fixed relative py-20 min-h-screen' style={{backgroundImage:`url('/seven.jpg')`, backgroundSize:'cover',backgroundPosition:'center'}}>
       <div className='absolute inset-0 bg-black opacity-75'></div>
-      <div className='grid grid-cols-1 h-screen container relative z-10 items-center justify-center mx-auto p-3 sm:grid-cols-3 gap-5'>
+      <div className='grid grid-cols-1 h-full container relative z-10 items-center justify-center mx-auto p-3 sm:grid-cols-3 gap-5'>
         <div ref={projectsRef} data-aos="fade-up" className=' rounded-md p-4 text-center'>
           <div data-aos="fade-up" duration='1500' className='flex justify-center my-4 text-[#01f3f4]'>
             <FaLaptopCode size={70} color="#01f3f4" className='imgview' />
