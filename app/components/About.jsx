@@ -22,6 +22,7 @@ function About() {
                 </p>
                 <Link href="/more" target="_blank" className="bg-[#01f3f4] md:mx-auto hover:bg-[#01f4f4ab] rounded-md mt-4 px-4 py-2 block w-fit">Read More</Link>
             </div>
+            
         </div>
     </div>
   )

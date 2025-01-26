@@ -12,6 +12,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import Head from "next/head";
 import Experince from "./components/Experince";
+import ParticleSystem from "./components/ParticleSystem";
 
 export default function Home() {
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function Home() {
       </Head>
       <Header/>
       <About/>
+      <ParticleSystem />
       <Experince />
       <Skills/>
       <Certifecation />
