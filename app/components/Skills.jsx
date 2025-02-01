@@ -4,12 +4,12 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Image from 'next/image';
+import { SiWordpress } from 'react-icons/si';
 import { SiZod } from 'react-icons/si';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
 import { FaGithub } from "react-icons/fa";
-import { SiPhp, SiVite, SiMysql, SiRedux  } from "react-icons/si";
-import { SiJest } from 'react-icons/si';
+import { SiJest, SiStrapi, SiPhp, SiMysql, SiRedux  } from "react-icons/si";
 import { DiHtml5, DiCss3, DiJsBadge, DiReact, DiNodejs } from 'react-icons/di';
 import { SiTailwindcss, SiTypescript, SiNextdotjs, SiGraphql, SiBootstrap } from 'react-icons/si';
 
@@ -34,7 +34,9 @@ function Skills() {
           <SwiperSlide><DiHtml5 color="#e34c26" size  ={80} /></SwiperSlide>
           <SwiperSlide><SiZod color="#3B82F6" size  ={80} /></SwiperSlide>
           <SwiperSlide><DiCss3 color="#1572b6" size={80} /></SwiperSlide>
+          <SwiperSlide><SiStrapi color="#ff6347" size={80} /></SwiperSlide>
           <SwiperSlide><SiRedux color="#764ABC" size={80} /></SwiperSlide>
+          <SwiperSlide><SiWordpress color="#ff5733" size={80} /></SwiperSlide>
           <SwiperSlide><SiJest color="#e35b64" size={80} /></SwiperSlide>
           <SwiperSlide><FaGithub color="#000000" size={80} /></SwiperSlide>
           <SwiperSlide><DiJsBadge color="#f7df1e" size={80} /></SwiperSlide>

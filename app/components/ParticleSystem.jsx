@@ -50,8 +50,8 @@ const ParticleSystem = () => {
       for (let j = i + 1; j < particleCount; j++) {
         const distance = new THREE.Vector3().fromArray(positions, i * 3).distanceTo(new THREE.Vector3().fromArray(positions, j * 3));
         if (distance < 50) {
-          const geometry = new THREE.BufferGeometry().setFromPoints([
-            new THREE.Vector3().fromArray(positions, i * 3),
+          const geometry = new THREE.BufferGeometry().setFromPoints([ 
+            new THREE.Vector3().fromArray(positions, i * 3), 
             new THREE.Vector3().fromArray(positions, j * 3)
           ]);
           const line = new THREE.Line(geometry, lineMaterial);
@@ -121,7 +121,14 @@ const ParticleSystem = () => {
     };
   }, []);
 
-  return <div id="particle-container" style={{ width: '100%', height: '100vh', overflow: 'hidden' }} />;
+  return (
+    <>
+      <div id="particle-container" style={{ width: '100%', height: '100vh', overflow: 'hidden' }} />
+      <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg text-lg font-semibold">
+        <p>Don't forget to check the website regularly for updates!</p>
+      </div>
+    </>
+  );
 };
 
 export default ParticleSystem;

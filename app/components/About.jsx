@@ -2,7 +2,7 @@ import Link from "next/link"
 
 function About() {
   return (
-    <div className="bg-[#323846] text-white py-16 px-4">
+    <div className="bg-[#323846] text-white py-32 px-4">
         <div className="grid container mx-auto items-start grid-cols-1 md:grid-cols-2 gap-8 ">
            <div data-aos="fade-down" className="container mx-auto h-full mr-10">
               <div className="overflow-hidden container mx-auto flex items-center rounded-lg bg-teal-400 justify-center rotate-45 w-64 h-64 md:w-72 md:h-72 imgview my-4">
