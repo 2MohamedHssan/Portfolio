@@ -1,12 +1,16 @@
 import Link from "next/link";
-import Lottie from "lottie-react";
 import { Typewriter } from 'react-simple-typewriter';
-import Animation from "../animation.json";
 import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
+import dynamic from "next/dynamic";  // Import dynamic from Next.js
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false }); // Disable SSR for Lottie
+
+import Animation from "../animation.json";
+
 export default function Header() {
   return (
     <div className="bg-[#20242d] text-white px-2 py-8 md:py-20">
-        <div className="flex justify-between items-center w-full container mx-auto font-[family-name:var(--font-geist-sans)]">
+        <div className="flex flex-col md:flex-row justify-between items-center w-full container mx-auto font-[family-name:var(--font-geist-sans)]">
             <div >
                 <p data-aos="fade-right">Hello, It's Me</p> 
                 <h1 data-aos="zoom-in" className="text-3xl font-bold py-2">Mohamed Hassan</h1>
@@ -30,9 +34,9 @@ export default function Header() {
                         <FaGithub color="#01f3f4" />
                     </a>
                 </div>
-                <Link data-aos="fade-up" href="/MohamedCV.pdf" target="_blank" className="bg-[#01f3f4] imgview hover:bg-[#01f4f4ab] rounded-md mt-4 px-4 py-2 block w-fit">Download CV</Link>
+                <Link rel="preload" as="style" data-aos="fade-up" href="/MohamedCV.pdf" target="_blank" className="bg-[#01f3f4] imgview hover:bg-[#01f4f4ab] rounded-md mt-4 px-4 py-2 block w-fit">Download CV</Link>
             </div>
-            <div data-aos="fade-up" className=" hidden md:flex items-center imgview overflow-hidden justify-center">
+            <div data-aos="fade-up" className="flex items-center imgview overflow-hidden justify-center">
                 <div style={{ width: 400, height: 400 }}>
                     <Lottie animationData={Animation} loop={true} />
                 </div>

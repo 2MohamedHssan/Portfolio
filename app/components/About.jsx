@@ -20,7 +20,7 @@ function About() {
                   Laravel to grow into a Full-Stack Developer.I focus on delivering clean
                   code, seamless user experiences, and mobile-friendly designs.
                 </p>
-                <Link href="/more" target="_blank" className="bg-[#01f3f4] md:mx-auto hover:bg-[#01f4f4ab] rounded-md mt-4 px-4 py-2 block w-fit">Read More</Link>
+                <Link rel="preload" as="style" href="/more" target="_blank" className="bg-[#01f3f4] md:mx-auto hover:bg-[#01f4f4ab] rounded-md mt-4 px-4 py-2 block w-fit">Read More</Link>
             </div>
             
         </div>

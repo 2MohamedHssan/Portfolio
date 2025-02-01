@@ -124,7 +124,7 @@ const ParticleSystem = () => {
   return (
     <>
       <div id="particle-container" style={{ width: '100%', height: '100vh', overflow: 'hidden' }} />
-      <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg text-lg font-semibold">
+      <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white z-[200] px-6 py-3 rounded-lg shadow-lg text-lg font-semibold">
         <p>Don't forget to check the website regularly for updates!</p>
       </div>
     </>
