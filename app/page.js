@@ -13,6 +13,7 @@ import AOS from 'aos';
 import Head from "next/head";
 import Experince from "./components/Experince";
 import ParticleSystem from "./components/ParticleSystem";
+import Cookes from "./components/Cookes";
 
 export default function Home() {
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function Home() {
         <title>Mohamed Hassan</title>
       </Head>
       <Header/>
+      <Cookes />
       <About/>
       <ParticleSystem />
       <Experince />
