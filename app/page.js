@@ -10,7 +10,6 @@ import Certifecation from "./components/Certifecation";
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import AOS from 'aos';
-import Head from "next/head";
 import Experince from "./components/Experince";
 import ParticleSystem from "./components/ParticleSystem";
 import Cookes from "./components/Cookes";
@@ -25,9 +24,6 @@ export default function Home() {
   }, []);
   return (
     <div className=" font-[family-name:var(--font-geist-sans)]">
-      <Head>
-        <title>Mohamed Hassan</title>
-      </Head>
       <Header/>
       <Cookes />
       <About/>

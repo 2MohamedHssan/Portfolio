@@ -123,7 +123,7 @@ const ParticleSystem = () => {
 
   return (
     <div className='relative'>
-    <h2 className=' absolute top-16 left-1/2 -translate-x-1/2 text-[#A1C4FD] text-2xl italic text-center'>Take a deep breath... Relax, you seem to have had a long day!</h2>
+    <h2 className='absolute top-16 left-1/2 -translate-x-1/2 text-[#A1C4FD] text-2xl italic text-center'>Take a deep breath... Relax, you seem to have had a long day!</h2>
       <div id="particle-container" style={{ width: '100%', height: '100vh', overflow: 'hidden' }} />
     </div>
   );

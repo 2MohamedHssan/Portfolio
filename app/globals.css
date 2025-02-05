@@ -58,6 +58,13 @@ body {
   height: 100%;
 }
 
+.active{
+  color: #01f3f4;
+}
+
+.cahnge button:hover{
+  color: #01f3f4;
+}
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -74,4 +81,61 @@ body {
 .swiper {
   width: 100%;
   height: 100%;
+}
+
+.imginmation-one,
+.imginmation-tow{
+  position: relative;
+  overflow: hidden;
+}
+
+.imginmation-one::after,
+.imginmation-one::before,
+.imginmation-tow::after,
+.imginmation-tow::before{
+  content: '';
+  top: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.imginmation-one::after{
+  border-style: dashed;
+  animation: animation 10s infinite linear;
+  border-left: rgb(0, 255, 234) solid 5px;
+}
+.imginmation-one::before{
+  animation: animation 10s .2s infinite linear;
+  border-right: rgb(0, 255, 234) solid 5px;
+}
+.imginmation-tow::after{
+  animation: animation-tow 10s .2s infinite linear;
+  border-bottom: rgb(0, 255, 234) solid 5px;
+}
+.imginmation-tow::before{
+  animation: animation-tow 10s .2s infinite linear;
+  border-top: rgb(0, 255, 234) solid 5px;
+}
+
+
+
+@keyframes animation {
+  0% {
+    transform:rotate(360deg);
+  }
+  100%{
+    transform:rotate(0deg);
+  }
+}
+
+@keyframes animation-tow {
+  0% {
+    transition-delay: 0.5s;
+    transform:rotate(360deg);
+  }
+  100%{
+    transform:rotate(0deg);
+    transition-delay: 0.5s;
+  }
 }
