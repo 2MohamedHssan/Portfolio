@@ -11,6 +11,7 @@ const projects = [
   { url: "https://2mohamedhssan.github.io/Kasper-Design/", imgsrc: "kasper.png", tools: ["HTML5", "CSS3"], pname: "Kasper", category: "HTML&CSS" },
   { url: "https://2mohamedhssan.github.io/First-Software-design/", tools: ["HTML5", "CSS3"], imgsrc: "profirst.png", pname: "Company-portfolio", category: "HTML&CSS" },
   { url: "https://2mohamedhssan.github.io/Awesome-Design/", tools: ["HTML5", "CSS3"], imgsrc: "tempthree.png", pname: "Design", category: "HTML&CSS" },
+  { url: "https://telmeez-platform.vercel.app/", tools: ["Next", "tailwind"], imgsrc: "telmeez.png", pname: "telmeez", category: "Next" },
   { url: "https://2mohamedhssan.github.io/", tools: ["There are more projects using React and Next.js but not deployed yet!"], imgsrc: "one.jpg", pname: "All", category: "Reactjs" }
 ];
 
@@ -48,7 +49,7 @@ function Projects() {
             <p className="border-b-[1px] border-t-[1px] w-full p-2 my-3 bg-gray-900">{project.pname}</p>
             <div className="flex gap-2 flex-wrap justify-center">
               {project.tools.map((tool, i) => (
-                <span key={i} className="border-[1px] rounded-md px-2 bg-teal-900 text-sm">
+                <span key={i} className="border-[1px] rounded-md px-2 mb-2 bg-teal-900 text-sm">
                   {tool}
                 </span>
               ))}
