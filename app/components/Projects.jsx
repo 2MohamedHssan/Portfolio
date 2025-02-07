@@ -11,7 +11,7 @@ const projects = [
   { url: "https://2mohamedhssan.github.io/Kasper-Design/", imgsrc: "kasper.png", tools: ["HTML5", "CSS3"], pname: "Kasper", category: "HTML&CSS" },
   { url: "https://2mohamedhssan.github.io/First-Software-design/", tools: ["HTML5", "CSS3"], imgsrc: "profirst.png", pname: "Company-portfolio", category: "HTML&CSS" },
   { url: "https://2mohamedhssan.github.io/Awesome-Design/", tools: ["HTML5", "CSS3"], imgsrc: "tempthree.png", pname: "Design", category: "HTML&CSS" },
-  { url: "https://telmeez-platform.vercel.app/", tools: ["Next", "tailwind"], imgsrc: "telmeez.png", pname: "telmeez", category: "Next" },
+  { url: "https://telmeez-platform.vercel.app/", tools: ["Next", "tailwind"], imgsrc: "telmeez.png", pname: "telmeez", category: "Nextjs" },
   { url: "https://2mohamedhssan.github.io/", tools: ["There are more projects using React and Next.js but not deployed yet!"], imgsrc: "one.jpg", pname: "All", category: "Reactjs" }
 ];
 
