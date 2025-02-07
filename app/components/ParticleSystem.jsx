@@ -118,7 +118,7 @@ const ParticleSystem = () => {
 
     return () => {
       container.removeChild(renderer.domElement);
-    };
+    }; 
   }, []);
 
   return (

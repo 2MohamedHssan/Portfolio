@@ -34,9 +34,9 @@ export default function Header() {
                         <FaGithub color="#01f3f4" />
                     </a>
                 </div>
-                <Link rel="preload" as="style" data-aos="fade-up" href="/MohamedCV.pdf" target="_blank" className="bg-[#01f3f4] imgview hover:bg-[#01f4f4ab] rounded-md mt-4 px-4 py-2 block w-fit">Download CV</Link>
+                <Link rel="preload" data-aos="fade-up" href="/MohamedCV.pdf" target="_blank" className="bg-[#01f3f4] imgview hover:bg-[#01f4f4ab] rounded-md mt-4 px-4 py-2 block w-fit">Download CV</Link>
             </div>
-            <div data-aos="zoom-in" className="flex items-center imgview overflow-hidden justify-center">
+            <div className="flex items-center imgview overflow-hidden justify-center">
                 <div className="w-full md:w-[500px]">
                     <Lottie animationData={Animation} loop={true} />
                 </div>
