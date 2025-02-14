@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
-import Certifecation from "./components/Certifecation";
+import Certification from "./components/Certification";
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import AOS from 'aos';
@@ -30,7 +30,7 @@ export default function Home() {
       <ParticleSystem />
       <Experince />
       <Skills/>
-      <Certifecation />
+      <Certification />
       <Serves/>
       <Projects/>
       <Contact/>

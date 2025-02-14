@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 function About() {
@@ -6,7 +7,7 @@ function About() {
         <div className="grid container mx-auto items-start grid-cols-1 md:grid-cols-2 gap-8 ">
            <div data-aos="fade-down" className="container mx-auto h-80 mr-10 imginmation-one rounded-full w-80">
               <div className="overflow-hidden container imginmation-tow rounded-full w-full h-full flex justify-center mx-auto">
-                <img src="mohamed_about1.png" className="w-[200px] h-96" alt="mohamed" />
+              <Image src="/mohamed.WebP" width={200} height={50} alt="mohamed" />
               </div>
            </div>
             <div data-aos="fade-up" id="about" className="p-2">

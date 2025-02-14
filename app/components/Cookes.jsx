@@ -22,6 +22,7 @@ function Cookies() {
             className="cursor-pointer absolute right-2 top-2 w-6 h-6 rounded-sm bg-gray-700 hover:bg-red-500"
           />
           <p>Don't forget to check the website regularly for updates!</p>
+          <a href="#Contact" onClick={()=>setView(false)} className="text-sm  text-teal-400 cursor-pointer hover:text-teal-500">Send a Message to me </a>
         </div>
         </div>
       )}

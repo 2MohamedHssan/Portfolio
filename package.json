@@ -14,6 +14,7 @@
     "aos": "^2.3.4",
     "lottie-react": "^2.4.1",
     "next": "15.0.3",
+    "nodemailer": "^6.10.0",
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
@@ -21,6 +22,7 @@
     "react-intersection-observer": "^9.15.1",
     "react-simple-typewriter": "^5.0.1",
     "react-spring": "^9.7.5",
+    "react-toastify": "^11.0.3",
     "swiper": "^11.1.15",
     "tailwind-clip-path": "^1.0.0"
   },
