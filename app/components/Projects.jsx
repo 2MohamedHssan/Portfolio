@@ -13,7 +13,9 @@ const projects = [
   { url: "https://2mohamedhssan.github.io/First-Software-design/", tools: ["HTML5", "CSS3"], imgsrc: "/profirst.png", pname: "Company-portfolio", category: "HTML&CSS" },
   { url: "https://2mohamedhssan.github.io/Awesome-Design/", tools: ["HTML5", "CSS3"], imgsrc: "/tempthree.png", pname: "Design", category: "HTML&CSS" },
   { url: "https://telmeez-platform.vercel.app/", tools: ["Next.js", "Tailwind"], imgsrc: "/telmeez.png", pname: "Telmeez", category: "Nextjs" },
-  { url: "https://2mohamedhssan.github.io/", tools: ["هناك المزيد من المشاريع باستخدام React و Next.js لكنها لم تُنشر بعد!"], imgsrc: "/one.jpg", pname: "All", category: "Reactjs" }
+  { url: "https://github.com/2MohamedHssan/DepoTask", tools: ["React.js", "Tailwind"], imgsrc: "/one.jpg", pname: "DepoTask", category: "Reactjs" },
+  { url: "https://github.com/2MohamedHssan/Courses-front", tools: ["React.js", "Tailwind"], imgsrc: "/four.jpg", pname: "Courses-front", category: "Reactjs" },
+  { url: "https://github.com/2MohamedHssan/Image-Gallery-app", tools: ["React.js", "Tailwind"], imgsrc: "/six.jpg", pname: "Image-Gallery-app", category: "Reactjs" },
 ];
 
 function Projects() {
@@ -27,7 +29,7 @@ function Projects() {
   const filteredProjects = activeCategory === "All" ? projects : projects.filter(project => project.category === activeCategory);
 
   return (
-    <div className='bg-[#323846] text-white py-16'>
+    <div id="Projects" className='bg-[#323846] text-white py-16'>
       <h1 data-aos="fade-down" className='text-3xl font-bold pb-16 text-center'>
         Latest <span className='text-[#01f3f4]'>Projects</span>
       </h1>

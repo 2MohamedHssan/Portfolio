@@ -13,8 +13,9 @@ export default function Navbar() {
         </Link>
         <ul className="md:flex hidden gap-4">
           <Link aria-label="About" href="#About" className="hover:text-teal-300">about</Link>
-          <Link aria-label="servecis" href="#servecis" className="hover:text-teal-300">Services</Link>
-          <Link aria-label="project" href="#project" className="hover:text-teal-300">latest Project</Link>
+          <Link aria-label="servecis" href="#services" className="hover:text-teal-300">Services</Link>
+          <Link aria-label="project" href="#Projects" className="hover:text-teal-300">latest Project</Link>
+          <Link aria-label="project" href="#Experience" className="hover:text-teal-300">Work Experience</Link>
           <Link aria-label="Contact" href="#Contact" className="hover:text-teal-300">Contact Us</Link>
         </ul>
         <button onClick={()=>{setOpen(prev => !prev)}} title="Toggle Menu" aria-label="Toggle Navigation" className="btn md:hidden btn-square btn-ghost">

@@ -12,7 +12,7 @@ function Experience() {
       style={{ backgroundImage: `url('/seven.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className="absolute inset-0 bg-black opacity-75"></div>
-      <div ref={ref} className="grid grid-cols-1 h-full container relative z-10 items-center justify-center mx-auto p-3 sm:grid-cols-3 gap-5">
+      <div ref={ref} className="grid grid-cols-1 h-96 container relative z-10 items-center justify-center mx-auto p-3 sm:grid-cols-3 gap-5">
         <div className="rounded-md p-4 text-center">
           <div className="flex justify-center my-4 text-[#01f3f4]">
             <FaLaptopCode size={70} className="imgview" />
