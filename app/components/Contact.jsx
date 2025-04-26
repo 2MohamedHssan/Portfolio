@@ -37,7 +37,7 @@ export default function Contact() {
       });
 
       const result = await response.json();
-      if (response.ok) {
+      if (response) {
         toast.success("Email sent successfully!", { position: "top-right" });
         setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });
       } else {
