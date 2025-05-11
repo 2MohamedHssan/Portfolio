@@ -1,56 +1,71 @@
 "use client";
 
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useRef, useEffect } from 'react';
 import 'swiper/css';
-import Image from 'next/image';
-import { SiWordpress } from 'react-icons/si';
-import { SiZod } from 'react-icons/si';
-import { Autoplay } from 'swiper/modules';
-import { FaGithub } from "react-icons/fa";
-import { SiJest, SiStrapi, SiPhp, SiMysql, SiRedux  } from "react-icons/si";
+import {
+  SiExpress, SiMongodb, SiNodedotjs, SiWordpress, SiZod, SiJest,
+  SiStrapi, SiPhp, SiMysql, SiRedux, SiTailwindcss, SiTypescript,
+  SiNextdotjs, SiGraphql, SiBootstrap
+} from 'react-icons/si';
 import { DiHtml5, DiCss3, DiJsBadge, DiReact } from 'react-icons/di';
-import { SiTailwindcss, SiTypescript, SiNextdotjs, SiGraphql, SiBootstrap } from 'react-icons/si';
+import { FaGithub } from "react-icons/fa";
+import Image from 'next/image';
+import gsap from 'gsap';
 
-function Skills() {
+function Skills({ value }) {
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    value ? gsap.to(sliderRef.current, {
+      x: '-50%',
+      duration: 20,
+      ease: 'linear',
+      repeat: -1,
+    }) : gsap.fromTo(sliderRef.current,
+      { x: "-50%" }, {
+      x: '0',
+      duration: 20,
+      ease: 'linear',
+      repeat: -1,
+    });
+  }, []);
+
+  const icons = [
+    <DiHtml5 className='icon-glow' color="#e34c26" size={50} />,
+    <SiZod className='icon-glow' color="#3B82F6" size={50} />,
+    <DiCss3 className='icon-glow' color="#1572b6" size={50} />,
+    <SiStrapi className='icon-glow' color="#1572b6" size={50} />,
+    <SiRedux className='icon-glow' color="#764ABC" size={50} />,
+    <SiWordpress className='icon-glow' color="#1572b6" size={50} />,
+    <SiJest className='icon-glow' color="#e35b64" size={50} />,
+    <FaGithub className='icon-glow' color="#000000" size={50} />,
+    <DiJsBadge className='icon-glow' color="#f7df1e" size={50} />,
+    <SiPhp className='icon-glow' color="#4F5D95" size={50} />,
+    <SiMysql className='icon-glow' color="#00758F" size={50} />,
+    <DiReact className='icon-glow' color="#61dbfb" size={50} />,
+    <SiTailwindcss className='icon-glow' color="#38B2AC" size={50} />,
+    <SiTypescript className='icon-glow' color="#3178C6" size={50} />,
+    <SiNextdotjs className='icon-glow' color="#000000" size={50} />,
+    <SiGraphql className='icon-glow' color="#E10098" size={50} />,
+    <SiBootstrap className='icon-glow' color="#7952B3" size={50} />,
+    <SiNodedotjs className='icon-glow' color="#339933" size={50} />,
+    <SiExpress className='icon-glow' color="#fff" size={50} />,
+    <SiMongodb className='icon-glow' color="#4DB33D" size={50} />,
+    <Image src="/logo.svg" alt='vite' width={50} height={50} />
+  ];
+
   return (
-    <div className="py-20 bg-[#20242d] text-white bg-fisrtbg">
-      <h1 className="text-3xl font-bold pb-16 text-center">Skills</h1>
-      <div data-aos="zoom-in" className="container pt-20 mx-auto">
-        <Swiper
-          modules={[Autoplay]}
-          slidesPerView={4}
-          spaceBetween={30}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-          }
-        }
-          className="mySwiper"
-          speed={3000}
-          grabCursor={true}>
-          <SwiperSlide><DiHtml5 color="#e34c26" size  ={80} alt="html" /></SwiperSlide>
-          <SwiperSlide><SiZod color="#3B82F6" size  ={80} alt="zod" /></SwiperSlide>
-          <SwiperSlide><DiCss3 color="#1572b6" size={80} alt="css" /></SwiperSlide>
-          <SwiperSlide><SiStrapi color="#1572b6" size={80} alt="strapi" /></SwiperSlide>
-          <SwiperSlide><SiRedux color="#764ABC" size={80} alt="Redux" /></SwiperSlide>
-          <SwiperSlide><SiWordpress color="#1572b6" alt="wordpress" size={80} /></SwiperSlide>
-          <SwiperSlide><SiJest color="#e35b64" alt="jest" size={80} /></SwiperSlide>
-          <SwiperSlide><FaGithub color="#000000" alt="githup" size={80} /></SwiperSlide>
-          <SwiperSlide><DiJsBadge color="#f7df1e" alt="js" size={80} /></SwiperSlide>
-          <SwiperSlide><SiPhp color="#4F5D95" alt="php" size={80} /></SwiperSlide>
-          <SwiperSlide><SiMysql color="#00758F" alt="sql" size={80} /></SwiperSlide>
-          <SwiperSlide><DiReact color="#61dbfb" alt="react" size={80} /></SwiperSlide>
-          <SwiperSlide><SiTailwindcss color="#38B2AC" alt="tailwind" size={80} /></SwiperSlide>
-          <SwiperSlide><SiTypescript color="#3178C6" alt="typscript" size={80} /></SwiperSlide>
-          <SwiperSlide><SiNextdotjs color="#000000" alt="next" size={80} /></SwiperSlide>
-          <SwiperSlide><SiGraphql color="#E10098" alt="graphql" size={80} /></SwiperSlide>
-          <SwiperSlide><SiBootstrap color="#7952B3" alt="bootstrap" size={80} /></SwiperSlide>
-          <SwiperSlide><Image src="/logo.svg" alt='vite' width={80} height={80}/></SwiperSlide>
-          <SwiperSlide><Image src="/nm_logo.png" alt='nm_logo' width={100} height={100}/></SwiperSlide>
-        </Swiper>
+    <div className="py-10 bg-[#20242d] text-white overflow-hidden">
+      <div className="w-full whitespace-nowrap">
+        <div ref={sliderRef} className="flex gap-12 w-max">
+          {icons.map((icon, i) => (
+            <div key={i} className="flex-shrink-0">{icon}</div>
+          ))}
+          {/* Repeat icons for smooth loop */}
+          {icons.map((icon, i) => (
+            <div key={i + 'x'} className="flex-shrink-0">{icon}</div>
+          ))}
+        </div>
       </div>
     </div>
   );

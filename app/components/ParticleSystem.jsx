@@ -13,17 +13,16 @@ const ParticleSystem = () => {
       duration: "Currently",
       description: "Gaining hands-on experience in full-stack development using Node.js and React. Working on backend APIs and front-end interfaces."
     }
-    ,{
+    , {
       company: "NCPC",
       role: "IT Support",
       duration: "2023 - 2024",
       description: "Provided technical support, troubleshooting hardware and software issues, and maintaining network infrastructure."
     }
   ];
-  console.log(experiences)
   return (
-<section className="py-10 px-6 bg-gray-900 text-white">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-10 px-6 bg-gray-900 text-white">
+      <div className=" container max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold border-b-2 border-teal-400 pb-2 mb-6">Work Experience</h2>
         <div className="space-y-6">
           {experiences.map((exp, index) => (

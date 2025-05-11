@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const projects = [
-  { url: "https://2mohamedhssan.github.io/EliteCorp/", imgsrc: "/Eipct1.png", pname: "EliteCorp", tools: ["HTML5", "TailwindCss", "JavaScript"], category: "HTML&CSS&JS" },
+  { url: "https://2mohamedhssan.github.io/EliteCorp/", imgsrc: "/Eipct1.png", pname: "EliteCorp", tools: ["HTML5", "TailwindCss", "JavaScript"], category: "JavaScript" },
   { url: "https://2mohamedhssan.github.io/Bondi/", imgsrc: "/bondi.png", tools: ["HTML5", "CSS3"], pname: "Bondi", category: "HTML&CSS" },
-  { url: "https://2mohamedhssan.github.io/First-JsDesign/", imgsrc: "/swaping.png", tools: ["HTML5", "CSS3", "JavaScript"], pname: "JsDesign", category: "HTML&CSS&JS" },
+  { url: "https://2mohamedhssan.github.io/First-JsDesign/", imgsrc: "/swaping.png", tools: ["HTML5", "CSS3", "JavaScript"], pname: "JsDesign", category: "JavaScript" },
   { url: "https://2mohamedhssan.github.io/Dashboard-Design/index.html", tools: ["HTML5", "CSS3"], imgsrc: "/dashbord.png", pname: "Dashboard", category: "HTML&CSS" },
   { url: "https://next-krye83eln-mohamed-hassans-projects-32952eb6.vercel.app/", tools: ["HTML5", "CSS3", "Next.js"], imgsrc: "/tow.jpg", pname: "testNext-app", category: "Nextjs" },
   { url: "https://2mohamedhssan.github.io/Clipboard/", imgsrc: "/clipbord.png", tools: ["HTML5", "TailwindCss"], pname: "Clipboard", category: "HTML&CSS" },
@@ -16,11 +16,13 @@ const projects = [
   { url: "https://github.com/2MohamedHssan/DepoTask", tools: ["React.js", "Tailwind"], imgsrc: "/one.jpg", pname: "DepoTask", category: "Reactjs" },
   { url: "https://github.com/2MohamedHssan/Courses-front", tools: ["React.js", "Tailwind"], imgsrc: "/four.jpg", pname: "Courses-front", category: "Reactjs" },
   { url: "https://github.com/2MohamedHssan/Image-Gallery-app", tools: ["React.js", "Tailwind"], imgsrc: "/six.jpg", pname: "Image-Gallery-app", category: "Reactjs" },
+  { url: "#", tools: ["React.js", "Tailwind"], imgsrc: "/dashbordTech.png", pname: "Dashbord ", category: "Reactjs" },
+  { url: "#", tools: ["React.js", "Tailwind"], imgsrc: "/Tech.png", pname: "TECH YARD HUB ", category: "Reactjs" },
 ];
 
 function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const categories = ["All", "HTML&CSS", "HTML&CSS&JS", "Reactjs", "Nextjs"];
+  const categories = ["All", "HTML&CSS", "JavaScript", "Reactjs", "Nextjs"];
 
   const handleCategoryChange = useCallback((category) => {
     setActiveCategory(category);
@@ -36,7 +38,7 @@ function Projects() {
 
       <div className="flex flex-wrap justify-center items-center gap-5 mb-4">
         {categories.map((category, index) => (
-          <button 
+          <button
             key={index}
             onClick={() => handleCategoryChange(category)}
             className={`px-4 py-2 border rounded-md ${activeCategory === category ? "bg-teal-500 text-black" : "bg-gray-700"}`}
@@ -48,9 +50,9 @@ function Projects() {
 
       <div className='grid grid-cols-1 container mx-auto p-3 sm:grid-cols-2 md:grid-cols-3 gap-5'>
         {filteredProjects.map((project, index) => (
-          <div data-aos="fade-up" key={index} className='bg-[#20242d] border border-teal-200 p-1 hover:scale-110 transition-transform duration-300 rounded-md overflow-hidden text-center'>
-            <Link href={project.url} rel="preload">
-              <Image className="h-64 w-full object-cover" src={project.imgsrc} width={300} height={250} alt={project.pname} priority />
+          <div data-aos="fade-up" key={index} className='bg-[#20242d] border border-teal-200 p-1 duration-300 rounded-md overflow-hidden'>
+            <Link href={project.url} rel="preload" className="relative our-work" data-app={project.pname} >
+              <Image className="h-64 w-full object-cover transition-all duration-500 ease-in-out transform hover:scale-105" src={project.imgsrc} width={300} height={250} alt={project.pname} priority />
             </Link>
             <p className="border-b-[1px] border-t-[1px] w-full p-2 my-3 bg-gray-900">{project.pname}</p>
             <div className="flex gap-2 flex-wrap justify-center">

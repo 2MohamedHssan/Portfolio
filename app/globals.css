@@ -5,13 +5,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --firstbg:#eee;
-  --secondbg:#e0dfdf;
-  --inputbg:#323846;
+  --firstbg: #eee;
+  --secondbg: #e0dfdf;
+  --inputbg: #323846;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,7 +21,7 @@ html{
   }
 }
 
-.bgdl{
+.bgdl {
   background-color: var(--background);
 }
 
@@ -29,42 +31,50 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-nav ul li{
+nav ul li {
   cursor: pointer;
   padding: 3px;
 }
-nav ul li:hover{
+
+nav ul li:hover {
   color: #01f3f4;
   transition: 0.3s;
 }
-input[type = "text"],input[type = "email"]{
+
+input[type="text"],
+input[type="email"] {
   padding: 10px;
   border-radius: 5px;
 }
-input:focus{
+
+input:focus {
   outline: none;
 }
-textarea{
+
+textarea {
   padding: 10px;
   border-radius: 5px;
   resize: none;
 }
+
 #app {
   height: 100%;
 }
+
 html,
 body {
   position: relative;
   height: 100%;
 }
 
-.active{
+.active {
   color: #01f3f4;
 }
 
-.cahnge button:hover{
+.cahnge button:hover {
   color: #01f3f4;
 }
+
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -74,8 +84,30 @@ body {
   padding: 0;
 }
 
-.imgview{
+.imgview {
   filter: drop-shadow(0 0 2em #01f3f4);
+}
+
+.icon-glow:hover {
+  filter: drop-shadow(0 0 2em #01f3f4);
+}
+
+@keyframes waveGlow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 2em #01f3f4);
+    transform: scale(1);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 1em #01f3f4);
+    transform: scale(1.1);
+  }
+}
+
+.icon {
+  animation: waveGlow 4s ease-in-out infinite;
 }
 
 .swiper {
@@ -84,7 +116,7 @@ body {
 }
 
 .imginmation-one,
-.imginmation-tow{
+.imginmation-tow {
   position: relative;
   overflow: hidden;
 }
@@ -92,7 +124,7 @@ body {
 .imginmation-one::after,
 .imginmation-one::before,
 .imginmation-tow::after,
-.imginmation-tow::before{
+.imginmation-tow::before {
   content: '';
   top: 0;
   position: absolute;
@@ -101,20 +133,24 @@ body {
   height: 100%;
   z-index: 50;
 }
-.imginmation-one::after{
+
+.imginmation-one::after {
   border-style: dashed;
   animation: animation 10s infinite linear;
   border-left: rgb(0, 255, 234) solid 5px;
 }
-.imginmation-one::before{
+
+.imginmation-one::before {
   animation: animation 10s .2s infinite linear;
   border-right: rgb(0, 255, 234) solid 5px;
 }
-.imginmation-tow::after{
+
+.imginmation-tow::after {
   animation: animation-tow 10s .2s infinite linear;
   border-bottom: rgb(0, 255, 234) solid 5px;
 }
-.imginmation-tow::before{
+
+.imginmation-tow::before {
   animation: animation-tow 10s .2s infinite linear;
   border-top: rgb(0, 255, 234) solid 5px;
 }
@@ -123,20 +159,73 @@ body {
 
 @keyframes animation {
   0% {
-    transform:rotate(360deg);
+    transform: rotate(360deg);
   }
-  100%{
-    transform:rotate(0deg);
+
+  100% {
+    transform: rotate(0deg);
   }
 }
 
 @keyframes animation-tow {
   0% {
     transition-delay: 0.5s;
-    transform:rotate(360deg);
+    transform: rotate(360deg);
   }
-  100%{
-    transform:rotate(0deg);
+
+  100% {
+    transform: rotate(0deg);
     transition-delay: 0.5s;
   }
+}
+
+@keyframes waveColor {
+  0% {
+    color: #01f3f4;
+  }
+
+  25% {
+    color: #ffffff;
+  }
+
+  50% {
+    color: #fffff2;
+  }
+
+  75% {
+    color: #aaa;
+  }
+
+  100% {
+    color: #01f3f4;
+  }
+}
+
+.wave-text {
+  font-weight: bold;
+  font-size: 3rem;
+  background-size: 200% 100%;
+  animation: waveColor 2s linear infinite;
+}
+
+.our-work::before {
+  position: absolute;
+  content: attr(data-app);
+  width: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 10px);
+  font-weight: bold;
+  color: #01f3f4;
+  background-color: #000000b8;
+  transition: 0.5s;
+  font-size: 1.5rem;
+  z-index: 20;
+  transform: translateY(calc(100% + 10px));
+}
+
+.our-work:hover::before {
+  transform: translateY(0);
+  cursor: pointer;
 }

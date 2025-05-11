@@ -19,6 +19,10 @@ function Certification() {
           <Image src="/IT.jpg" width={500} height={300} alt="IT Support Certification" />
           <h2 className='text-xl pt-2 font-bold'>IT Support</h2>
         </div>
+        <div data-aos="fade-down" className='bg-[#20242d] rounded-md p-4 text-center'>
+          <Image src="/mohamedFullstak.png" width={500} height={300} alt="IT Support Certification" />
+          <h2 className='text-xl pt-2 font-bold'>Full Stack Development Internship</h2>
+        </div>
       </div>
     </div>
   );
