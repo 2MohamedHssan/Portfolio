@@ -28,7 +28,7 @@ function Experience() {
           </div>
           <p className="text-white">
             <span className="text-4xl font-bold m-3 text-teal-400">
-              {inView && <CountUp start={0} end={12} duration={2} delay={0.5} easing="easeOutCubic" />}+ Months
+              {inView && <CountUp start={0} end={6} duration={2} delay={0.5} easing="easeOutCubic" />}+ Months
             </span>
           </p>
           <h2 className="text-xl font-bold text-[#01f3f4]">Experience</h2>

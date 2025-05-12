@@ -1,30 +1,29 @@
-import Image from "next/image"
-import Link from "next/link"
+// import Image from "next/image"
+// import Link from "next/link"
+import { motion } from "framer-motion";
 
 function About() {
   return (
-    <div className="bg-[#323846] text-white py-32 px-4">
-      <div className="grid container mx-auto items-start grid-cols-1 md:grid-cols-2 gap-8 ">
-        <div data-aos="fade-down" className="container mx-auto h-80 mr-10 imginmation-one rounded-full w-80">
-          <div className="overflow-hidden container imginmation-tow rounded-full w-full h-full flex justify-center mx-auto">
-            <Image src="/mohamed.WebP" width={200} height={50} alt="mohamed" />
-          </div>
+    <section className="bg-gray-900 text-white py-16 px-6 md:px-20">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold pb-16 text-center wave-text">About Me</h2>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          I'm a <span className="text-cyan-400 font-semibold">Full-Stack Developer</span> with a strong passion for building fast, scalable, and user-friendly web applications.
+          My main stack is <span className="text-pink-400 font-medium">React</span> on the frontend and <span className="text-green-400 font-medium">Node.js / Express</span> on the backend.
+        </p>
+        <p className="text-lg text-gray-400 mt-4">
+          I enjoy creating responsive interfaces, working with RESTful APIs, and integrating databases like <span className="text-green-500">MongoDB</span> and <span className="text-blue-400">MySQL</span>. I'm always looking for ways to improve user experience and optimize performance. Clean code, component reusability, and teamwork are what I value most.
+        </p>
+        <div className="mt-8 flex justify-center gap-6">
+          <a href="/MohamedCV.pdf" download className="bg-cyan-500 hover:bg-cyan-400 transition px-6 py-2 rounded-full text-white font-medium shadow-md">
+            Download CV
+          </a>
+          <a href="#Contact" className="border border-cyan-500 hover:bg-cyan-500 transition px-6 py-2 rounded-full text-cyan-300 hover:text-white font-medium shadow-md">
+            Contact Me
+          </a>
         </div>
-        <div data-aos="fade-up" id="about" className="p-2">
-          <h1 className="text-4xl font-bold">About <span className="text-[#01f3f4]">me</span></h1>
-          <h2 className="text-xl font-bold">Full Stack Developer</h2>
-          <p className=" italic leading-relaxed text-lg">
-            I'm Mohamed Hassan, a Full Stack Developer with a passion for building fast, responsive, and user-friendly web applications.
-            I specialize in front-end technologies like React, Next.js, and Tailwind CSS, where I focus on turning UI designs into functional,
-            interactive interfaces. On the backend, I’m actively working with Node.js, Express, and WordPress to strengthen my full stack capabilities.
-            I aim to deliver clean, maintainable code and seamless user experiences across all devices. I'm constantly exploring new tools and frameworks
-            to stay up to date and improve performance, accessibility, and design standards.
-          </p>
-          <Link rel="preload" href="AboutMe" target="_blank" className="bg-[#01f3f4] md:mx-auto hover:bg-[#01f4f4ab] rounded-md mt-4 px-4 py-2 block w-fit">Read More</Link>
-        </div>
-
       </div>
-    </div>
+    </section>
   )
 }
 

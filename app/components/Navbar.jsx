@@ -16,7 +16,7 @@ export default function Navbar() {
           <Link aria-label="servecis" href="#services" className="hover:text-teal-300">Services</Link>
           <Link aria-label="project" href="#Projects" className="hover:text-teal-300">Latest Project</Link>
           <Link aria-label="project" href="#Experience" className="hover:text-teal-300">Work Experience</Link>
-          <Link aria-label="Contact" href="#Contact" className="hover:text-teal-300">Contact Us</Link>
+          <Link aria-label="Contact" href="#Contact" className="hover:text-teal-300">Contact Me</Link>
         </ul>
         <button onClick={() => { setOpen(prev => !prev) }} title="Toggle Menu" aria-label="Toggle Navigation" className="btn md:hidden btn-square btn-ghost">
           <svg
@@ -35,7 +35,7 @@ export default function Navbar() {
           <Link aria-label="About" href="#About" onClick={_ => setOpen(false)} className="hover:bg-[#323846] p-2">About</Link>
           <Link aria-label="servecis" href="#services" onClick={_ => setOpen(false)} className="hover:bg-[#323846] p-2">Services</Link>
           <Link aria-label="project" href="#project" onClick={_ => setOpen(false)} className="hover:bg-[#323846] p-2">Latest Project</Link>
-          <Link aria-label="Contact" href="#Contact" onClick={_ => setOpen(false)} className="hover:bg-[#323846] p-2">Contact Us</Link>
+          <Link aria-label="Contact" href="#Contact" onClick={_ => setOpen(false)} className="hover:bg-[#323846] p-2">Contact Me</Link>
         </ul>
       </div>
     </nav>

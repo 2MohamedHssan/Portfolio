@@ -10,7 +10,7 @@ const ParticleSystem = () => {
     {
       company: "Ideas & Concepts",
       role: "Full-Stack Intern (Node.js & React)",
-      duration: "Currently",
+      duration: "January 2025 - May 2025",
       description: "Gaining hands-on experience in full-stack development using Node.js and React. Working on backend APIs and front-end interfaces."
     }
     , {
