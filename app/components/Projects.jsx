@@ -4,12 +4,12 @@ import Image from "next/image";
 
 const projects = [
   { url: "#", tools: ["React.js", "Tailwind"], imgsrc: "/dashbordTech.png", pname: "Dashbord ", category: "Reactjs" },
-  { url: "#", tools: ["React.js", "Tailwind"], imgsrc: "/Tech.png", pname: "TECH YARD HUB ", category: "Reactjs" },
+  { url: "https://techyardhub.com/", tools: ["React.js", "Tailwind"], imgsrc: "/Tech.png", pname: "TECH YARD HUB ", category: "Reactjs" },
   { url: "https://2mohamedhssan.github.io/EliteCorp/", imgsrc: "/Eipct1.png", pname: "EliteCorp", tools: ["HTML5", "TailwindCss", "JavaScript"], category: "JavaScript" },
   { url: "https://2mohamedhssan.github.io/Bondi/", imgsrc: "/bondi.png", tools: ["HTML5", "CSS3"], pname: "Bondi", category: "HTML&CSS" },
   { url: "https://2mohamedhssan.github.io/First-JsDesign/", imgsrc: "/swaping.png", tools: ["HTML5", "CSS3", "JavaScript"], pname: "JsDesign", category: "JavaScript" },
   { url: "https://2mohamedhssan.github.io/Dashboard-Design/index.html", tools: ["HTML5", "CSS3"], imgsrc: "/dashbord.png", pname: "Dashboard", category: "HTML&CSS" },
-  { url: "https://next-krye83eln-mohamed-hassans-projects-32952eb6.vercel.app/", tools: ["HTML5", "CSS3", "Next.js"], imgsrc: "/tow.jpg", pname: "testNext-app", category: "Nextjs" },
+  { url: "https://github.com/2MohamedHssan/Next-app", tools: ["TailwindCss", "Next.js"], imgsrc: "/tow.jpg", pname: "Next-app", category: "Nextjs" },
   { url: "https://2mohamedhssan.github.io/Clipboard/", imgsrc: "/clipbord.png", tools: ["HTML5", "TailwindCss"], pname: "Clipboard", category: "HTML&CSS" },
   { url: "https://2mohamedhssan.github.io/Kasper-Design/", imgsrc: "/kasper.png", tools: ["HTML5", "CSS3"], pname: "Kasper", category: "HTML&CSS" },
   { url: "https://2mohamedhssan.github.io/First-Software-design/", tools: ["HTML5", "CSS3"], imgsrc: "/profirst.png", pname: "Company-portfolio", category: "HTML&CSS" },

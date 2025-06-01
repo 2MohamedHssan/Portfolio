@@ -6,7 +6,7 @@ function Footer() {
       <footer className="">
         <Skills value={true} />
         <Skills value={false} />
-        <div className="p-4 font-bold text-white">&copy; 2024 Mohamed Hassan
+        <div className="p-4 font-bold text-white">&copy; {new Date().getFullYear()} Mohamed Hassan
         </div>
       </footer>
     </div>

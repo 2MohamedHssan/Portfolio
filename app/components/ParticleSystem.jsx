@@ -21,7 +21,7 @@ const ParticleSystem = () => {
     }
   ];
   return (
-    <section className="py-10 px-6 bg-gray-900 text-white">
+    <section id='experience' className="py-10 px-6 bg-gray-900 text-white">
       <div className=" container max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold border-b-2 border-teal-400 pb-2 mb-6">Work Experience</h2>
         <div className="space-y-6">

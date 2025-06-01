@@ -33,7 +33,7 @@ function CurentSkills() {
     return (
         <div className='w-full bg-[#20242d] text-white/80 py-16'>
             <h1 className="text-3xl font-bold pb-16 text-center wave-text">Skills</h1>
-            <div className='w-full container mx-auto p-3 flex gap-6 flex-wrap'>
+            <div className='w-full container mx-auto p-10 md:p-3 flex gap-6 flex-wrap'>
                 {icons.map((item, index) => (
                     <div
                         key={index}
