@@ -5,7 +5,7 @@ import { BsPalette } from 'react-icons/bs';
 export default function Serves() {
   return (
     <div id='services' className='bg-[#20242d] text-white/80 py-16'>
-      <h1 data-aos="fade-right" className='text-3xl font-bold pb-16 text-center text-white'>Our <span className='text-[#01f3f4]'>Services</span></h1>
+      <h1 data-aos="fade-right" className='text-3xl font-bold pb-16 text-center text-white'>My <span className='text-[#01f3f4]'>Services</span></h1>
       <div className='grid grid-cols-1 container mx-auto p-3 sm:grid-cols-2 md:grid-cols-3 gap-5'>
         <div data-aos="fade-up" className='bg-[#323846] rounded-md p-4 text-center'>
           <div data-aos="fade-up" className='flex justify-center my-4 text-[#01f3f4]'><FaCode size={50} /></div>

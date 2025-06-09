@@ -1,13 +1,34 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [scroll, setScroll] = useState(false)
+  const [scrollWidth, setScrollWidth] = useState(0);
+
+  useEffect(() => {
+    const handler = () => {      
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (scrollTop / docHeight) * 100;
+      setScrollWidth(scrolled);
+
+      if (window.scrollY > 20) {
+        setScroll(true)
+      } else {
+        setScroll(false)
+      }
+    }
+    window.addEventListener("scroll",handler)
+    return () => window.removeEventListener("scroll", handler);
+},[])
+
   return (
-    <nav className={` fixed top-0 z-50 w-full duration-500 bg-[#20242d] text-white font-[family-name:var(--font-geist-sans)]`}>
-      <div className="flex px-2 justify-between items-center container mx-auto">
+    <nav className={`fixed top-0 z-50 w-full md:p-2 duration-500 ${scroll?"bg-black/90":"bg-[#20242d]"} text-white lg:text-lg font-[family-name:var(--font-geist-sans)]`}>
+        <div className={`h-[2px] left-0 bg-teal-300 fixed md:top-[62px] top-12`} style={{width:`${scrollWidth}%`}}></div>
+      <div className="flex px-2 md:px-0 justify-between items-center container mx-auto">
         <Link href="/">
           <Image src="/logo.WebP" width={50} height={50} alt="logo" />
         </Link>
@@ -31,7 +52,7 @@ export default function Navbar() {
               d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
-        <ul className={`absolute top-12 mx-auto transition-all delay-200 flex flex-col left-0 md:hidden overflow-hidden bg-[#20242d]  ${open ? `h-60` : 'h-0'} p-2 rounded-sm w-full gap-2`}>
+        <ul className={`absolute ${scroll?"bg-black/90":"bg-[#20242d]"} top-12 px-auto transition-all delay-200 flex flex-col left-0 md:hidden overflow-hidden ${open ? `h-60 block` : 'h-0 hidden'} p-2 rounded-sm w-full gap-2`}>
           <Link aria-label="About" href="#About" onClick={_ => setOpen(false)} className="hover:bg-[#323846] p-2">About</Link>
           <Link aria-label="project" href="#experience" onClick={_ => setOpen(false)} className="hover:bg-[#323846] p-2">Work Experience</Link>
           <Link aria-label="servecis" href="#services" onClick={_ => setOpen(false)} className="hover:bg-[#323846] p-2">Services</Link>

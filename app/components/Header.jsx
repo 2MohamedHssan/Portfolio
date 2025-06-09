@@ -14,14 +14,15 @@ export default function Header() {
                 <div >
                     <p data-aos="fade-right"> Hello, It's Me </p>
                     <h1 data-aos="zoom-in" className="text-3xl font-bold py-2">Mohamed Hassan</h1>
-                    <span data-aos="zoom-in" className="text-[#01f3f4] font-bold text-xl">
+                    <span data-aos="zoom-in" className="text-[#01f3f4] max-w-60 font-bold text-xl">
+                    I am a Full Stack Developer {" "}
                         <Typewriter
-                            words={['I am a Full Stack Developer', 'I build responsive websites', 'Skilled in building server-side rendered apps with Next.js']}
+                            words={['NodeJs & Mongoose',"Reactjs & TailwindCss"]}
                             loop={Infinity}
                             cursor={true}
                             cursorStyle="|"
-                            typeSpeed={70}
-                            deleteSpeed={50}
+                            typeSpeed={80}
+                            deleteSpeed={100}
                             delaySpeed={1000}
                         />
                     </span>
@@ -38,7 +39,7 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="flex items-center imgview overflow-hidden justify-center">
-                    <div className="w-full md:w-[500px]">
+                    <div className="w-full md:w-[400px]">
                         <Lottie animationData={Animation} loop={true} />
                     </div>
                 </div>

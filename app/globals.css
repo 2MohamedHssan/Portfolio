@@ -93,7 +93,6 @@ body {
 }
 
 @keyframes waveGlow {
-
   0%,
   100% {
     filter: drop-shadow(0 0 2em #01f3f4);
@@ -125,7 +124,7 @@ body {
 .imginmation-one::before,
 .imginmation-tow::after,
 .imginmation-tow::before {
-  content: '';
+  content: "";
   top: 0;
   position: absolute;
   left: 0;
@@ -141,21 +140,19 @@ body {
 }
 
 .imginmation-one::before {
-  animation: animation 10s .2s infinite linear;
+  animation: animation 10s 0.2s infinite linear;
   border-right: rgb(0, 255, 234) solid 5px;
 }
 
 .imginmation-tow::after {
-  animation: animation-tow 10s .2s infinite linear;
+  animation: animation-tow 10s 0.2s infinite linear;
   border-bottom: rgb(0, 255, 234) solid 5px;
 }
 
 .imginmation-tow::before {
-  animation: animation-tow 10s .2s infinite linear;
+  animation: animation-tow 10s 0.2s infinite linear;
   border-top: rgb(0, 255, 234) solid 5px;
 }
-
-
 
 @keyframes animation {
   0% {
@@ -222,10 +219,10 @@ body {
   transition: 0.5s;
   font-size: 1.5rem;
   z-index: 20;
-  transform: translateY(150%);
+  transform: translateX(150%);
 }
 
 .our-work:hover::before {
-  transform: translateY(0);
+  transform: translateX(0);
   cursor: pointer;
 }

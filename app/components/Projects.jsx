@@ -3,8 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const projects = [
-  { url: "#", tools: ["React.js", "Tailwind"], imgsrc: "/dashbordTech.png", pname: "Dashbord ", category: "Reactjs" },
   { url: "https://techyardhub.com/", tools: ["React.js", "Tailwind"], imgsrc: "/Tech.png", pname: "TECH YARD HUB ", category: "Reactjs" },
+  { url: "https://byload-uae.com/", tools: ["React.js", "Tailwind"], imgsrc: "/byload.png", pname: "Bylaod ", category: "Reactjs" },
+  { url: "#", tools: ["React.js", "Tailwind"], imgsrc: "/dashbordTech.png", pname: "Dashbord ", category: "Reactjs" },
   { url: "https://2mohamedhssan.github.io/EliteCorp/", imgsrc: "/Eipct1.png", pname: "EliteCorp", tools: ["HTML5", "TailwindCss", "JavaScript"], category: "JavaScript" },
   { url: "https://2mohamedhssan.github.io/Bondi/", imgsrc: "/bondi.png", tools: ["HTML5", "CSS3"], pname: "Bondi", category: "HTML&CSS" },
   { url: "https://2mohamedhssan.github.io/First-JsDesign/", imgsrc: "/swaping.png", tools: ["HTML5", "CSS3", "JavaScript"], pname: "JsDesign", category: "JavaScript" },
@@ -15,6 +16,7 @@ const projects = [
   { url: "https://2mohamedhssan.github.io/First-Software-design/", tools: ["HTML5", "CSS3"], imgsrc: "/profirst.png", pname: "Company-portfolio", category: "HTML&CSS" },
   { url: "https://2mohamedhssan.github.io/Awesome-Design/", tools: ["HTML5", "CSS3"], imgsrc: "/tempthree.png", pname: "Design", category: "HTML&CSS" },
   { url: "https://telmeez-platform.vercel.app/", tools: ["Next.js", "Tailwind"], imgsrc: "/telmeez.png", pname: "Telmeez", category: "Nextjs" },
+  { url: "https://portfolio-v418.vercel.app/", tools: ["Next.js", "Tailwind"], imgsrc: "/portoflio.png", pname: "myPortoflio", category: "Nextjs" },
   { url: "https://github.com/2MohamedHssan/DepoTask", tools: ["React.js", "Tailwind"], imgsrc: "/one.jpg", pname: "DepoTask", category: "Reactjs" },
   { url: "https://github.com/2MohamedHssan/Courses-front", tools: ["React.js", "Tailwind"], imgsrc: "/four.jpg", pname: "Courses-front", category: "Reactjs" },
   { url: "https://github.com/2MohamedHssan/Image-Gallery-app", tools: ["React.js", "Tailwind"], imgsrc: "/six.jpg", pname: "Image-Gallery-app", category: "Reactjs" },
@@ -51,8 +53,8 @@ function Projects() {
       <div className='grid grid-cols-1 container mx-auto p-3 sm:grid-cols-2 md:grid-cols-3 gap-5'>
         {filteredProjects.map((project, index) => (
           <div data-aos="fade-up" key={index} className='bg-[#20242d] border border-teal-200 p-1 duration-300 rounded-md overflow-hidden'>
-            <Link href={project.url} rel="preload" className="relative our-work" data-app={project.pname} >
-              <Image className="h-64 w-full object-cover transition-all duration-500 ease-in-out transform hover:scale-105" src={project.imgsrc} width={300} height={250} alt={project.pname} priority />
+            <Link href={project.url} rel="preload" className="h-64 relative block our-work" data-app={project.pname} >
+              <Image className=" h-full w-full transition-all duration-500 ease-in-out transform hover:scale-105" src={project.imgsrc} width={300} height={300} alt={project.pname} />
             </Link>
             <p className="border-b-[1px] border-t-[1px] w-full p-2 my-3 bg-gray-900">{project.pname}</p>
             <div className="flex gap-2 flex-wrap justify-center">
