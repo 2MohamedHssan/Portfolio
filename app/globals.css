@@ -89,10 +89,11 @@ body {
 }
 
 .icon-glow:hover {
-  filter: drop-shadow(0 0 2em #01f3f4);
+  filter: drop-shadow(0 0 1em #01f3f4);
 }
 
 @keyframes waveGlow {
+
   0%,
   100% {
     filter: drop-shadow(0 0 2em #01f3f4);
@@ -225,4 +226,17 @@ body {
 .our-work:hover::before {
   transform: translateX(0);
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #01f3f4;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
 }

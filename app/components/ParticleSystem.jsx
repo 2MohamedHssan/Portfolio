@@ -26,7 +26,9 @@ const ParticleSystem = () => {
         <h2 className="text-3xl font-bold border-b-2 border-teal-400 pb-2 mb-6">Work Experience</h2>
         <div className="space-y-6">
           {experiences.map((exp, index) => (
-            <div key={index} className="p-4 bg-gray-800 rounded-lg shadow-lg">
+            <div data-aos="fade-up"
+              data-aos-delay={index * 100}
+              key={index} className="p-4 bg-gray-800 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-teal-400">{exp.company}</h3>
               <p className="text-lg text-gray-300">{exp.role}</p>
               <span className="text-sm text-gray-400">{exp.duration}</span>

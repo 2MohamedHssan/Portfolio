@@ -9,9 +9,10 @@ function Experience() {
   return (
     <div className="bg-[#323846] relative py-20 flex justify-center min-h-screen items-start md:items-center bg-[url('/seven.jpg')] bg-cover bg-center bg-fixed">
       <div className="absolute inset-0 bg-black opacity-75"></div>
-      <div ref={ref} className="grid grid-cols-1 h-96 container relative z-10 items-center justify-center mx-auto bg-fixed p-3 sm:grid-cols-3 gap-5">
+      <div ref={ref} className="grid grid-cols-1 container relative z-10 items-center justify-center mx-auto p-3 sm:grid-cols-3 gap-5">
+
         <div className="rounded-md p-4 text-center">
-          <div className="flex justify-center my-4 text-[#01f3f4] bg-fixed">
+          <div className="flex justify-center my-4 text-[#01f3f4]">
             <FaLaptopCode size={70} className="imgview" />
           </div>
           <p className="text-white">

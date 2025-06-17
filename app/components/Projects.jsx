@@ -1,10 +1,10 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const projects = [
   { url: "https://techyardhub.com/", tools: ["React.js", "Tailwind"], imgsrc: "/Tech.png", pname: "TECH YARD HUB ", category: "Reactjs" },
-  { url: "https://byload-uae.com/", tools: ["React.js", "Tailwind"], imgsrc: "/byload.png", pname: "Bylaod ", category: "Reactjs" },
+  { url: "https://byload-uae.com/", tools: ["React.js", "Tailwind"], imgsrc: "/Byload.png", pname: "Bylaod ", category: "Reactjs" },
   { url: "#", tools: ["React.js", "Tailwind"], imgsrc: "/dashbordTech.png", pname: "Dashbord ", category: "Reactjs" },
   { url: "https://2mohamedhssan.github.io/EliteCorp/", imgsrc: "/Eipct1.png", pname: "EliteCorp", tools: ["HTML5", "TailwindCss", "JavaScript"], category: "JavaScript" },
   { url: "https://2mohamedhssan.github.io/Bondi/", imgsrc: "/bondi.png", tools: ["HTML5", "CSS3"], pname: "Bondi", category: "HTML&CSS" },
@@ -59,9 +59,14 @@ function Projects() {
             <p className="border-b-[1px] border-t-[1px] w-full p-2 my-3 bg-gray-900">{project.pname}</p>
             <div className="flex gap-2 flex-wrap justify-center">
               {project.tools.map((tool, i) => (
-                <span key={i} className="border-[1px] rounded-md px-2 mb-2 bg-teal-900 text-sm">
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  key={i} className="border-[1px] rounded-md px-2 mb-2 bg-teal-900 text-sm">
                   {tool}
-                </span>
+                </motion.span>
               ))}
             </div>
           </div>
