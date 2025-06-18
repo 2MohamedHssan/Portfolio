@@ -2,10 +2,11 @@ import { useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-const projects = [
+export const projects = [
   { url: "https://techyardhub.com/", tools: ["React.js", "Tailwind"], imgsrc: "/Tech.png", pname: "TECH YARD HUB ", category: "Reactjs" },
   { url: "https://byload-uae.com/", tools: ["React.js", "Tailwind"], imgsrc: "/Byload.png", pname: "Bylaod ", category: "Reactjs" },
   { url: "#", tools: ["React.js", "Tailwind"], imgsrc: "/dashbordTech.png", pname: "Dashbord ", category: "Reactjs" },
+  { url: "https://dfm-analyzer.vercel.app/", tools: ["React.js", "Tailwind"], imgsrc: "/DFM.png", pname: "DFM Analyzer ", category: "Reactjs" },
   { url: "https://2mohamedhssan.github.io/EliteCorp/", imgsrc: "/Eipct1.png", pname: "EliteCorp", tools: ["HTML5", "TailwindCss", "JavaScript"], category: "JavaScript" },
   { url: "https://2mohamedhssan.github.io/Bondi/", imgsrc: "/bondi.png", tools: ["HTML5", "CSS3"], pname: "Bondi", category: "HTML&CSS" },
   { url: "https://2mohamedhssan.github.io/First-JsDesign/", imgsrc: "/swaping.png", tools: ["HTML5", "CSS3", "JavaScript"], pname: "JsDesign", category: "JavaScript" },

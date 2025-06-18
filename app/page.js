@@ -16,6 +16,7 @@ import Cookes from './components/Cookes';
 import CurentSkills from './components/CurentSkills';
 import IntroMask from './components/Incoming';
 import Navbar from './components/Navbar';
+import HorizontalScrollDemo from './components/HorizontalScrollDemo';
 
 export default function Home() {
   const [introDone, setIntroDone] = useState(false);
@@ -33,6 +34,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <Cookes />
+      <HorizontalScrollDemo />
       <About />
       <ParticleSystem />
       <CurentSkills />

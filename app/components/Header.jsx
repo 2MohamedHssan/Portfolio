@@ -12,7 +12,7 @@ export default function Header() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full container mx-auto font-[family-name:var(--font-geist-sans)]">
                 <div className='px-2'>
                     <p data-aos="fade-right"> Hello, It's Me </p>
-                    <h1 data-aos="zoom-in" className="text-3xl font-bold py-2">Mohamed Hassan</h1>
+                    <h1 data-aos="zoom-in" className="text-3xl font-bold py-2 text-flicker-in-glow md:text-5xl lg:text-7xl">MOHAMED HASSAN</h1>
                     <span data-aos="zoom-in" className="text-[#01f3f4] max-w-60 font-bold text-xl">
                         I am a Full Stack Developer {" "}
                         <Typewriter

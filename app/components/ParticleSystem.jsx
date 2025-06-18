@@ -1,25 +1,25 @@
 
+export const experiences = [
+  {
+    company: "Tech-Yard Hub",
+    role: "Front-End Developer",
+    duration: "March 2025 - Present",
+    description: "Developing and optimizing user interfaces using React and Tailwind CSS. Working on a large dashboard with nested and dynamic routes."
+  },
+  {
+    company: "Ideas & Concepts",
+    role: "Full-Stack Intern (Node.js & React)",
+    duration: "January 2025 - May 2025",
+    description: "Gaining hands-on experience in full-stack development using Node.js and React. Working on backend APIs and front-end interfaces."
+  }
+  , {
+    company: "NCPC",
+    role: "IT Support",
+    duration: "2023 - 2024",
+    description: "Provided technical support, troubleshooting hardware and software issues, and maintaining network infrastructure."
+  }
+];
 const ParticleSystem = () => {
-  const experiences = [
-    {
-      company: "Tech-Yard Hub",
-      role: "Front-End Developer",
-      duration: "March 2025 - Present",
-      description: "Developing and optimizing user interfaces using React and Tailwind CSS. Working on a large dashboard with nested and dynamic routes."
-    },
-    {
-      company: "Ideas & Concepts",
-      role: "Full-Stack Intern (Node.js & React)",
-      duration: "January 2025 - May 2025",
-      description: "Gaining hands-on experience in full-stack development using Node.js and React. Working on backend APIs and front-end interfaces."
-    }
-    , {
-      company: "NCPC",
-      role: "IT Support",
-      duration: "2023 - 2024",
-      description: "Provided technical support, troubleshooting hardware and software issues, and maintaining network infrastructure."
-    }
-  ];
   return (
     <section id='experience' className="py-10 px-6 bg-gray-900 text-white">
       <div className=" container max-w-4xl mx-auto">
