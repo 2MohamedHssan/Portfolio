@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Typewriter } from 'react-simple-typewriter';
 import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 import dynamic from "next/dynamic";
@@ -10,14 +9,14 @@ import Animation from "../animation.json";
 export default function Header() {
     return (
         <div className="bg-[#20242d] text-white px-2 py-8 md:py-20">
-            <div className="flex flex-col md:flex-row justify-between items-center w-full container mx-auto font-[family-name:var(--font-geist-sans)]">
-                <div >
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full container mx-auto font-[family-name:var(--font-geist-sans)]">
+                <div className='px-2'>
                     <p data-aos="fade-right"> Hello, It's Me </p>
                     <h1 data-aos="zoom-in" className="text-3xl font-bold py-2">Mohamed Hassan</h1>
                     <span data-aos="zoom-in" className="text-[#01f3f4] max-w-60 font-bold text-xl">
-                    I am a Full Stack Developer {" "}
+                        I am a Full Stack Developer {" "}
                         <Typewriter
-                            words={['NodeJs & Mongoose',"Reactjs & TailwindCss"]}
+                            words={['Express & Mongoose', "Reactjs & TailwindCss"]}
                             loop={Infinity}
                             cursor={true}
                             cursorStyle="|"

@@ -5,7 +5,6 @@ import { useInView } from 'react-intersection-observer';
 
 function Experience() {
   const { ref, inView } = useInView({ triggerOnce: true });
-
   return (
     <div className="bg-[#323846] relative py-20 flex justify-center min-h-screen items-start md:items-center bg-[url('/seven.jpg')] bg-cover bg-center bg-fixed">
       <div className="absolute inset-0 bg-black opacity-75"></div>

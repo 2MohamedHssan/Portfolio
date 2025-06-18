@@ -128,23 +128,21 @@ function CurentSkills() {
         {
             icon: <SiExpress size={40} className="text-white" />,
             title: 'Express.js',
-            curent: true,
+            curent: false,
             description: 'Minimalist backend framework.',
         },
         {
             icon: <SiMongodb size={40} className="text-[#4DB33D]" />,
             title: 'MongoDB',
-            curent: true,
+            curent: false,
             description: 'NoSQL database for scalable apps.',
         },
-
     ];
-
     return (
         <section className="bg-[#1f2937] py-12 px-6 text-white">
             <div className="max-w-7xl mx-auto text-center">
                 <h2 className="text-3xl font-bold mb-10">My Skills</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {skills.map((skill, index) => (
                         <div
                             data-aos="fade-up"

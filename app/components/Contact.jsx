@@ -57,15 +57,15 @@ export default function Contact() {
       </h1>
       <form className="max-w-[800px] mx-auto text-center" onSubmit={handleSubmitForm}>
         <div data-aos="fade-up" className="grid grid-cols-1 container mx-auto p-3 sm:grid-cols-2 gap-5">
-          <input type="text" name="firstName" required value={formData.firstName} onChange={handleChange} className="caret-teal-400 bg-inputbg text-black" placeholder="First Name" />
-          <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} className="bg-inputbg caret-teal-400 text-black" placeholder="Last Name" />
+          <input type="text" name="firstName" required value={formData.firstName} onChange={handleChange} className="caret-teal-400 bg-inputbg text-white" placeholder="First Name" />
+          <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} className="bg-inputbg caret-teal-400 text-white" placeholder="Last Name" />
         </div>
         <div data-aos="fade-up" className="grid grid-cols-1 container mx-auto p-3 sm:grid-cols-2 gap-5">
-          <input type="text" name="subject" value={formData.subject} onChange={handleChange} className="bg-inputbg text-black caret-teal-400" placeholder="Subject" />
-          <input type="email" name="email" value={formData.email} required onChange={handleChange} className="bg-inputbg text-black caret-teal-400" placeholder="Email" />
+          <input type="text" name="subject" value={formData.subject} onChange={handleChange} className="bg-inputbg text-white caret-teal-400" placeholder="Subject" />
+          <input type="email" name="email" value={formData.email} required onChange={handleChange} className="bg-inputbg text-white caret-teal-400" placeholder="Email" />
         </div>
         <div data-aos="fade-up" className="container mx-auto p-3">
-          <textarea name="message" value={formData.message} required onChange={handleChange} className="caret-teal-400 bg-inputbg text-black focus:outline-none w-full min-h-48" placeholder="Type Your Message"></textarea>
+          <textarea name="message" value={formData.message} required onChange={handleChange} className="caret-teal-400 bg-inputbg text-white focus:outline-none w-full min-h-48" placeholder="Type Your Message"></textarea>
         </div>
         <button
           type="submit"
