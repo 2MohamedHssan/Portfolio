@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import Scrollbar from 'smooth-scrollbar';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import About from './About';
-import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalScrollDemo = () => {
@@ -87,7 +85,7 @@ const HorizontalScrollDemo = () => {
                             <div className=" animate-pulse w-full flex justify-center items-center py-10">
                                 <div className="w-40 h-40 md:w-96 md:h-96 relative rounded-full overflow-hidden bg-gray-700 shadow-lg border-4 border-teal-400">
                                     <img
-                                        src="/mohamed.webp"
+                                        src="/mohamed.WebP"
                                         alt="Mohamed Hassan"
                                         className=" object-cover"
                                     />
