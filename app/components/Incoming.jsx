@@ -6,7 +6,7 @@ export default function IntroMask({ children, onFinish }) {
 
     useEffect(() => {
         setTimeout(() => setClipStyle('circle(150% at 50% 50%)'), 0);
-        setTimeout(() => onFinish(), 800);
+        setTimeout(() => onFinish(), 5000);
     }, []);
 
     return (

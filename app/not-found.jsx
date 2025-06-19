@@ -17,11 +17,11 @@ const NotFoundPage = () => {
           Go Back Home
         </p>
       </Link>
-      <img
+      {/* <img
         src="https://via.placeholder.com/500x300?text=Not+Found"
         alt="Not Found Illustration"
         className="mt-8 w-full max-w-lg"
-      />
+      /> */}
     </div>
   );
 };
