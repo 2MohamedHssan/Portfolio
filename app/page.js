@@ -41,7 +41,7 @@ export default function Home() {
 
     const timeout = setTimeout(() => {
       setIntroDone(true);
-    }, 40000);
+    }, 1000);
 
     return () => clearTimeout(timeout);
   }, []);
