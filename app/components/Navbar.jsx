@@ -26,7 +26,7 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className={`fixed top-0 z-50 w-full md:p-2 duration-500 ${scroll ? "bg-black/90" : "bg-[#20242d]"} text-white lg:text-lg font-[family-name:var(--font-geist-sans)]`}>
+    <nav className={`sticky top-0 z-50 w-full md:p-2 duration-500 ${scroll ? "bg-black/90" : "bg-gray-900"} text-white lg:text-lg font-[family-name:var(--font-geist-sans)]`}>
       <div className={`h-[2px] left-0 bg-teal-300 fixed md:top-[62px] top-12`} style={{ width: `${scrollWidth}%` }}></div>
       <div className="flex px-2 md:px-0 justify-between items-center container mx-auto">
         <Link href="/">

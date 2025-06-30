@@ -11,6 +11,7 @@ import { DiHtml5, DiCss3, DiJsBadge, DiReact } from 'react-icons/di';
 import { FaGithub } from "react-icons/fa";
 import Image from 'next/image';
 import gsap from 'gsap';
+import AnimatedHeader from './Animationheader';
 
 function Skills({ value }) {
   const sliderRef = useRef(null);
@@ -55,19 +56,23 @@ function Skills({ value }) {
   ];
 
   return (
-    <div className="py-10 bg-[#20242d] text-white overflow-hidden">
-      <div className="w-full whitespace-nowrap">
-        <div ref={sliderRef} className="flex gap-12 w-max">
-          {icons.map((icon, i) => (
-            <div key={i} className="flex-shrink-0">{icon}</div>
-          ))}
-          {/* Repeat icons for smooth loop */}
-          {icons.map((icon, i) => (
-            <div key={i + 'x'} className="flex-shrink-0">{icon}</div>
-          ))}
+    <>
+      <AnimatedHeader Children={(
+        <div className="py-10 text-white overflow-hidden">
+          <div className="w-full whitespace-nowrap">
+            <div ref={sliderRef} className="flex gap-12 w-max">
+              {icons.map((icon, i) => (
+                <div key={i} className="flex-shrink-0">{icon}</div>
+              ))}
+              {/* Repeat icons for smooth loop */}
+              {icons.map((icon, i) => (
+                <div key={i + 'x'} className="flex-shrink-0">{icon}</div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )} />
+    </>
   );
 }
 

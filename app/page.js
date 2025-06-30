@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Header from './components/Header';
+// import Header from './components/Header';
 import About from './components/About';
 import Serves from './components/Serves';
 import Projects from './components/Projects';
@@ -15,6 +15,7 @@ import Cookes from './components/Cookes';
 import CurentSkills from './components/CurentSkills';
 import IntroMask from './components/Incoming';
 import Navbar from './components/Navbar';
+import Header from './components/Header';
 
 
 export default function Home() {
@@ -68,7 +69,7 @@ export default function Home() {
     <>
       {!introDone ? (
         <>
-          <div className="w-screen h-screen flex justify-center items-center bg-gray-900">
+          <div className="w-screen h-screen flex justify-center items-center bg-black">
             <div className=" w-full flex flex-col justify-center items-center py-10">
               <h1 className="text-3xl font-bold py-2 text-white text-flicker-in-glow md:text-5xl lg:text-7xl">MOHAMED HASSAN</h1>
               <div className="animate-pulse w-96 h-96 relative rounded-full overflow-hidden bg-gray-700 shadow-lg border-4 border-teal-400">
