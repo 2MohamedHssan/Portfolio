@@ -14,7 +14,7 @@ function Experience() {
   return (
 <>
 <AnimatedHeader children={ 
-      <div ref={ref} className="bg-gray-900 text-white py-16">
+      <div ref={ref} className="text-white py-16">
         <h1 data-aos="fade-down" className='text-3xl font-bold pb-16 text-center'>
           My <span className='text-[#01f3f4]'>Experience</span>
         </h1>

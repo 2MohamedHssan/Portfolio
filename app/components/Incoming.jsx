@@ -11,7 +11,7 @@ export default function IntroMask({ children, onFinish }) {
 
     return (
         <div
-            className="fixed inset-0 z-[9999] bg-[#03060e] text-white overflow-hidden transition-all duration-[1600ms] linear"
+            className="fixed inset-0 z-[9999] bg-purple-700 text-white overflow-hidden transition-all duration-[1600ms] linear"
             style={{
                 clipPath: clipStyle,
                 WebkitClipPath: clipStyle,

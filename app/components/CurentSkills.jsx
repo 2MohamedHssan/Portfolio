@@ -140,7 +140,7 @@ function CurentSkills() {
     return (
         <>
             <AnimatedHeader Children={(
-                <section className="bg-[#1f2937] py-12 px-6 text-white">
+                <section className="py-12 px-6 text-white">
                     <div className="max-w-7xl mx-auto text-center">
                         <h2 className="text-3xl font-bold mb-10">My Skills</h2>
                         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

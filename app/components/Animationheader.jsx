@@ -100,7 +100,7 @@ const AnimatedHeader = ({ Children, view, hight, bg }) => {
     return (
         <header
             ref={headerRef}
-            className={`relative flex ${hight && "h-screen"} items-center justify-center overflow-hidden ${bg ? bg : "bg-gradient-to-tr from-gray-700 to-gray-900"} text-white`}
+            className={`relative flex ${hight && "h-screen"} items-center justify-center overflow-hidden ${bg ? bg : "bg-gradient-to-tr from-gray-900 to-gray-950"} text-white`}
         >
             {/* Animated background canvas */}
             <canvas

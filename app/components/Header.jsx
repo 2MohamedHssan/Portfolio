@@ -10,7 +10,7 @@ import AnimatedHeader from './Animationheader';
 export default function Header() {
     return (
         <>
-            <AnimatedHeader hight={true} bg={"bg-gray-900"} view={true} Children={
+            <AnimatedHeader hight={true} view={true} Children={
                 <section className="flex flex-col md:flex-row justify-between items-start md:items-center w-full container gap-3 mx-auto font-[family-name:var(--font-geist-sans)]">
                     <div className='px-2'>
                         <p data-aos="fade-right"> Hello, It's Me </p>
