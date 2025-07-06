@@ -40,7 +40,7 @@ function Projects() {
 
   return (
     <>
-      <AnimatedHeader bg={"bg-gray-900"} Children={(
+      <AnimatedHeader Children={(
         <div id="Projects" className=' text-white py-16'>
           <h1 data-aos="fade-down" className='text-3xl font-bold pb-16 text-center'>
             Latest <span className='text-[#01f3f4]'>Projects</span>

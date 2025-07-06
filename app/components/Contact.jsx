@@ -69,6 +69,7 @@ export default function Contact() {
             <div data-aos="fade-up" className="container mx-auto p-3">
               <textarea name="message" value={formData.message} required onChange={handleChange} className="caret-teal-400 bg-inputbg text-white focus:outline-none w-full min-h-48" placeholder="Type Your Message"></textarea>
             </div>
+            {/* <input type="text" inputMode="numeric" pattern="[0-9]*" placeholder="Phone Number" /> */}
             <button
               type="submit"
               className={`bg-[#01f4f4ab] hover:bg-[#01f4f4c0] cursor-pointer rounded-md mt-4 px-4 py-2 ${loading ? "opacity-50 cursor-not-allowed" : ""}`}

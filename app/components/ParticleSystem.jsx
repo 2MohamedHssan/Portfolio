@@ -22,7 +22,7 @@ export const experiences = [
 ];
 const ParticleSystem = () => {
   return (
-    <div className="bg-gray-900 text-white">
+    <div className="text-white">
       <AnimatedHeader bg={"bg-gray-900"} Children={(
         <section id='experience' className="py-10 px-6 bg-gray-900 text-white">
           <div className=" container max-w-4xl mx-auto">

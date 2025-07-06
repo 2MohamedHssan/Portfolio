@@ -4,7 +4,7 @@ import AnimatedHeader from "./Animationheader";
 function Certification() {
   return (
     <>
-      <AnimatedHeader bg={"bg-gray-900"} Children={(
+      <AnimatedHeader Children={(
         <div className=' text-white/80 py-16'>
           <h1 data-aos="fade-right" className='text-3xl font-bold pb-16 text-center text-white'>
             Certifications <span className='text-blue-500'></span>
