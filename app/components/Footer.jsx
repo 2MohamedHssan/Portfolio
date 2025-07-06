@@ -2,7 +2,7 @@ import Skills from "./Skills"
 
 function Footer() {
   return (
-    <div className="bg-[#323846] text-center bg-custom-gradient">
+    <div className="text-center bg-custom-gradient">
       <footer className="">
         {/* <Skills value={true} /> */}
         <Skills value={false} />

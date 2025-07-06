@@ -61,7 +61,7 @@ function Projects() {
           <div className='grid grid-cols-1 container mx-auto p-3 sm:grid-cols-2 md:grid-cols-3 gap-5'>
             {filteredProjects.map((project, index) => (
               <div data-aos="flip-left"
-                data-aos-delay={index * 100}
+                data-aos-delay={index * 0.1}
                 key={index} className='bg-[#20242d] border border-teal-200 p-1 duration-300 rounded-md overflow-hidden'>
                 <a target="_blanck" href={project.url} rel="preload" className="h-64 relative block our-work" data-app={project.pname} >
                   <Image className=" h-full w-full transition-all duration-500 ease-in-out transform hover:scale-105" src={project.imgsrc} width={300} height={300} alt={project.pname} />

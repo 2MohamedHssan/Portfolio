@@ -93,8 +93,6 @@ export const skills = [
         curent: true,
         description: 'Typed superset of JavaScript.',
     },
-
-
     {
         icon: <SiGraphql size={40} className="text-[#E10098]" />,
         title: 'GraphQL',
@@ -149,7 +147,7 @@ function CurentSkills() {
                             {skills.map((skill, index) => (
                                 <div
                                     data-aos="flip-left"
-                                    data-aos-delay={index * 100}
+                                    data-aos-delay={index * 0.1}
                                     key={index}
                                     className={`bg-[#323846] icon-glow hover:border-2 border-teal-400 transition-all dur rounded-md p-6 shadow hover:scale-105 duration-300 text-center ${skill.curent ? 'bg-teal-700' : ''}`}
                                 >

@@ -39,7 +39,6 @@ const AnimatedHeader = ({ Children, view, hight, bg }) => {
         };
 
         initParticles();
-
         // Mouse move event
         const handleMouseMove = (e) => {
             const rect = canvas.getBoundingClientRect();
@@ -101,7 +100,7 @@ const AnimatedHeader = ({ Children, view, hight, bg }) => {
     return (
         <header
             ref={headerRef}
-            className={`relative flex ${hight && "h-screen"} items-center justify-center overflow-hidden ${bg ? bg : "bg-gray-800"} text-white`}
+            className={`relative flex ${hight && "h-screen"} items-center justify-center overflow-hidden ${bg ? bg : "bg-gradient-to-tr from-gray-700 to-gray-900"} text-white`}
         >
             {/* Animated background canvas */}
             <canvas
@@ -111,8 +110,8 @@ const AnimatedHeader = ({ Children, view, hight, bg }) => {
             {Children}
             {view && (
                 <div onClick={() => {
-                    window.scrollBy({
-                        top: 1200,
+                    window.scrollTo({
+                        top: 500,
                         behavior: 'smooth'
                     });
                 }} className="absolute bottom-10 md:bottom-32 cursor-pointer left-1/2 -translate-x-1/2 animate-bounce">

@@ -17,7 +17,7 @@ export default function Serves() {
           <h1 data-aos="fade-right" className='text-3xl font-bold pb-16 text-center text-white'>My <span className='text-[#01f3f4]'>Services</span></h1>
           <div className='grid grid-cols-1 container mx-auto p-3 sm:grid-cols-2 md:grid-cols-3 gap-5'>
             {services.map((service, index) => (
-              <div key={index} data-aos="flip-right" data-aos-delay={200 * index} className='bg-[#323846] rounded-md p-4 text-center'>
+              <div key={index} data-aos="flip-right" data-aos-delay={2 * index} className='bg-[#323846] rounded-md p-4 text-center'>
                 <div data-aos="fade-up" className='flex justify-center my-4 text-[#01f3f4]'>{service.icon}</div>
                 <h2 className='text-xl font-bold'>{service.titel}</h2>
                 <p>{service.descrption}</p>
