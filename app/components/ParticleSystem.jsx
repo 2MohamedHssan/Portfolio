@@ -2,9 +2,15 @@ import AnimatedHeader from "./Animationheader";
 
 export const experiences = [
   {
+    company: "Uni & Do",
+    role: "Full-Stack Developer",
+    duration: "July 2025 - Present",
+    description: "Building and maintaining a scalable full-stack application using React and Strapi. Developed responsive and accessible user interfaces with Tailwind CSS, and implemented dynamic and nested routing using React Router. Integrated Strapi CMS for content management and built custom APIs to support frontend requirements. Focused on performance optimization, code reusability, and seamless user experience across the platform."
+  },
+  {
     company: "Tech-Yard Hub",
     role: "Front-End Developer",
-    duration: "March 2025 - Present",
+    duration: "March 2025 - July 2025",
     description: "Developing and optimizing user interfaces using React and Tailwind CSS. Working on a large dashboard with nested and dynamic routes."
   },
   {
