@@ -1,15 +1,21 @@
-import Skills from "./Skills"
+import AnimatedHeader from "./Animationheader";
+import Skills from "./Skills";
 
 function Footer() {
   return (
-    <div className="text-center bg-gray-900">
-      <footer className="">
-        <Skills value={false} />
-        <div className="p-4 font-bold text-white">&copy; {new Date().getFullYear()} Mohamed Hassan
+    <AnimatedHeader
+      Children={
+        <div className="text-center bg-gray-900">
+          <footer className="">
+            <Skills value={false} />
+            <div className="p-4 font-bold text-white">
+              &copy; {new Date().getFullYear()} Mohamed Hassan
+            </div>
+          </footer>
         </div>
-      </footer>
-    </div>
-  )
+      }
+    />
+  );
 }
 
-export default Footer
+export default Footer;
