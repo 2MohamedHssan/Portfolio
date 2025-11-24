@@ -10,7 +10,6 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Certification from "./components/Certification";
 import Experince from "./components/Experince";
-import ParticleSystem from "./components/ParticleSystem";
 import Cookes from "./components/Cookes";
 import CurentSkills from "./components/CurentSkills";
 import IntroMask from "./components/Incoming";
@@ -52,7 +51,6 @@ export default function Home() {
       <Header />
       <Cookes />
       <About />
-      <ParticleSystem />
       <CurentSkills />
       <Experince />
       <Certification />

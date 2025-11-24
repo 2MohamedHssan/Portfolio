@@ -23,7 +23,6 @@ import { DiHtml5, DiCss3, DiJsBadge, DiReact } from "react-icons/di";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import gsap from "gsap";
-import AnimatedHeader from "./Animationheader";
 
 function Skills({ value }) {
   const sliderRef = useRef(null);
@@ -46,57 +45,50 @@ function Skills({ value }) {
             repeat: -1,
           }
         );
-  }, []);
+  }, [value]);
 
   const icons = [
-    <DiHtml5 className="icon-glow" color="#e34c26" size={20} />,
-    <SiZod className="icon-glow" color="#3B82F6" size={20} />,
-    <DiCss3 className="icon-glow" color="#1572b6" size={20} />,
-    <SiStrapi className="icon-glow" color="#1572b6" size={20} />,
-    <SiRedux className="icon-glow" color="#764ABC" size={20} />,
-    <SiWordpress className="icon-glow" color="#1572b6" size={20} />,
-    <SiJest className="icon-glow" color="#e35b64" size={20} />,
-    <FaGithub className="icon-glow" color="#000000" size={20} />,
-    <DiJsBadge className="icon-glow" color="#f7df1e" size={20} />,
-    <SiPhp className="icon-glow" color="#4F5D95" size={20} />,
-    // <SiMysql className="icon-glow" color="#00758F" size={20} />,
-    <DiReact className="icon-glow" color="#61dbfb" size={20} />,
-    <SiTailwindcss className="icon-glow" color="#38B2AC" size={20} />,
-    <SiTypescript className="icon-glow" color="#3178C6" size={20} />,
-    <SiNextdotjs className="icon-glow" color="#000000" size={20} />,
-    // <SiGraphql className="icon-glow" color="#E10098" size={20} />,
-    <SiBootstrap className="icon-glow" color="#7952B3" size={20} />,
-    <SiNodedotjs className="icon-glow" color="#339933" size={20} />,
-    <SiExpress className="icon-glow" color="#fff" size={20} />,
-    <SiMongodb className="icon-glow" color="#4DB33D" size={20} />,
-    <Image src="/logo.svg" alt="vite" width={20} height={20} />,
+    <DiHtml5 className="icon-glow hover:text-[#e34c26] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiZod className="icon-glow hover:text-[#3B82F6] transition-colors duration-300" color="#6b7280" size={30} />,
+    <DiCss3 className="icon-glow hover:text-[#1572b6] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiStrapi className="icon-glow hover:text-[#1572b6] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiRedux className="icon-glow hover:text-[#764ABC] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiWordpress className="icon-glow hover:text-[#1572b6] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiJest className="icon-glow hover:text-[#e35b64] transition-colors duration-300" color="#6b7280" size={30} />,
+    <FaGithub className="icon-glow hover:text-[#ffffff] transition-colors duration-300" color="#6b7280" size={30} />,
+    <DiJsBadge className="icon-glow hover:text-[#f7df1e] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiPhp className="icon-glow hover:text-[#4F5D95] transition-colors duration-300" color="#6b7280" size={30} />,
+    <DiReact className="icon-glow hover:text-[#61dbfb] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiTailwindcss className="icon-glow hover:text-[#38B2AC] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiTypescript className="icon-glow hover:text-[#3178C6] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiNextdotjs className="icon-glow hover:text-[#ffffff] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiBootstrap className="icon-glow hover:text-[#7952B3] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiNodedotjs className="icon-glow hover:text-[#339933] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiExpress className="icon-glow hover:text-[#ffffff] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiMongodb className="icon-glow hover:text-[#4DB33D] transition-colors duration-300" color="#6b7280" size={30} />,
+    <Image src="/logo.svg" alt="vite" width={30} height={30} className="opacity-50 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0" />,
   ];
 
   return (
-    <>
-      <AnimatedHeader
-        Children={
-          <div className="py-2 text-white overflow-hidden">
-            <div className="w-full whitespace-nowrap">
-              <div ref={sliderRef} className="flex gap-12 w-max">
-                {icons.map((icon, i) => (
-                  <div key={i} className="flex-shrink-0">
-                    {icon}
-                  </div>
-                ))}
-                {/* Repeat icons for smooth loop */}
-                {icons.map((icon, i) => (
-                  <div key={i + "x"} className="flex-shrink-0">
-                    {icon}
-                  </div>
-                ))}
-              </div>
+    <div className="py-10 overflow-hidden bg-transparent relative z-10">
+      <div className="w-full whitespace-nowrap mask-image-gradient">
+        <div ref={sliderRef} className="flex gap-16 w-max items-center">
+          {icons.map((icon, i) => (
+            <div key={i} className="flex-shrink-0 transform hover:scale-110 transition-transform duration-300 cursor-pointer">
+              {icon}
             </div>
-          </div>
-        }
-      />
-    </>
+          ))}
+          {/* Repeat icons for smooth loop */}
+          {icons.map((icon, i) => (
+            <div key={i + "x"} className="flex-shrink-0 transform hover:scale-110 transition-transform duration-300 cursor-pointer">
+              {icon}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
 export default Skills;
+

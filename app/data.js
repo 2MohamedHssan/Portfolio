@@ -18,6 +18,7 @@ import {
 import { DiHtml5, DiCss3, DiJsBadge, DiReact } from "react-icons/di";
 import Image from "next/image";
 import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import { PlaywrightSVG } from "./components/svg";
 
 export const links = [
   {
@@ -92,7 +93,13 @@ export const skills = [
   {
     icon: <SiJest size={40} className="text-[#e35b64]" />,
     title: "Jest",
-    curent: false,
+    curent: true,
+    description: "Unit testing framework for JavaScript.",
+  },
+  {
+    icon: <PlaywrightSVG size={40} />,
+    title: "Playwright",
+    curent: true,
     description: "Unit testing framework for JavaScript.",
   },
   {
@@ -104,12 +111,13 @@ export const skills = [
   {
     icon: <SiStrapi size={40} className="text-[#8e75ff]" />,
     title: "Strapi",
-    curent: false,
+    curent: true,
     description: "Headless CMS for custom APIs.",
   },
   {
     icon: <FaGithub size={40} className="text-[#000]" />,
     title: "GitHub",
+    curent:true,
     description: "Version control and collaboration.",
   },
   {
@@ -134,7 +142,7 @@ export const skills = [
   {
     icon: <DiJsBadge size={40} className="text-[#f7df1e]" />,
     title: "JavaScript",
-    curent: true,
+    curent: false,
     description: "Core scripting language for the web.",
   },
   {
@@ -149,16 +157,16 @@ export const skills = [
     curent: true,
     description: "Modern component-based UI development.",
   },
-  // {
-  //   icon: <SiMysql size={40} className="text-[#00758F]" />,
-  //   title: "MySQL",
-  //   curent: false,
-  //   description: "Structured database management.",
-  // },
+  {
+    icon: <SiMysql size={40} className="text-[#00758F]" />,
+    title: "MySQL",
+    curent: false,
+    description: "Structured database management.",
+  },
   {
     icon: <SiNextdotjs size={40} className="text-[#000]" />,
     title: "Next.js",
-    curent: false,
+    curent: true,
     description: "React framework for SSR & routing.",
   },
   {
@@ -167,12 +175,12 @@ export const skills = [
     curent: true,
     description: "Typed superset of JavaScript.",
   },
-  // {
-  //   icon: <SiGraphql size={40} className="text-[#E10098]" />,
-  //   title: "GraphQL",
-  //   curent: false,
-  //   description: "Query language for flexible APIs.",
-  // },
+  {
+    icon: <SiGraphql size={40} className="text-[#E10098]" />,
+    title: "GraphQL",
+    curent: false,
+    description: "Query language for flexible APIs.",
+  },
   {
     icon: <SiTailwindcss size={40} className="text-[#38B2AC]" />,
     title: "Tailwind CSS",
