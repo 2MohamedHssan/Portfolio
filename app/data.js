@@ -321,7 +321,7 @@ export const projects = [
   {
     url: "https://portfolio-v418.vercel.app/",
     tools: ["Next.js", "Tailwind"],
-    imgsrc: "/portoflio.png",
+    imgsrc: "/newportoflio.png",
     pname: "myPortoflio",
     category: "Nextjs",
   },

@@ -37,7 +37,6 @@ export default function Header() {
                 words={[
                   "Full Stack Developer",
                   "React & Next.js Expert",
-                  "UI/UX Enthusiast",
                 ]}
                 loop={Infinity}
                 cursor={true}
