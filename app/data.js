@@ -103,12 +103,6 @@ export const skills = [
     description: "Unit testing framework for JavaScript.",
   },
   {
-    icon: <SiZod size={40} className="text-[#3B82F6]" />,
-    title: "Zod",
-    curent: true,
-    description: "Schema validation for TypeScript.",
-  },
-  {
     icon: <SiStrapi size={40} className="text-[#8e75ff]" />,
     title: "Strapi",
     curent: true,
@@ -117,7 +111,7 @@ export const skills = [
   {
     icon: <FaGithub size={40} className="text-[#000]" />,
     title: "GitHub",
-    curent:true,
+    curent: true,
     description: "Version control and collaboration.",
   },
   {
@@ -126,13 +120,6 @@ export const skills = [
     curent: true,
     description: "Responsive styling and animations.",
   },
-  {
-    icon: <SiWordpress size={40} className="text-[#1572b6]" />,
-    title: "WordPress",
-    curent: false,
-    description: "Flexible CMS for custom sites.",
-  },
-
   {
     icon: <SiRedux size={40} className="text-[#764ABC]" />,
     title: "Redux",
@@ -145,23 +132,12 @@ export const skills = [
     curent: false,
     description: "Core scripting language for the web.",
   },
-  {
-    icon: <SiPhp size={40} className="text-[#4F5D95]" />,
-    title: "PHP",
-    curent: false,
-    description: "Backend scripting for dynamic sites.",
-  },
+
   {
     icon: <DiReact size={40} className="text-[#61dbfb]" />,
     title: "React",
     curent: true,
     description: "Modern component-based UI development.",
-  },
-  {
-    icon: <SiMysql size={40} className="text-[#00758F]" />,
-    title: "MySQL",
-    curent: false,
-    description: "Structured database management.",
   },
   {
     icon: <SiNextdotjs size={40} className="text-[#000]" />,
@@ -174,12 +150,6 @@ export const skills = [
     title: "TypeScript",
     curent: true,
     description: "Typed superset of JavaScript.",
-  },
-  {
-    icon: <SiGraphql size={40} className="text-[#E10098]" />,
-    title: "GraphQL",
-    curent: false,
-    description: "Query language for flexible APIs.",
   },
   {
     icon: <SiTailwindcss size={40} className="text-[#38B2AC]" />,
@@ -216,6 +186,31 @@ export const skills = [
     title: "MongoDB",
     curent: false,
     description: "NoSQL database for scalable apps.",
+  },
+  {
+    icon: <SiWordpress size={40} className="text-[#1572b6]" />,
+    title: "WordPress ",
+    curent: false,
+    description: "Flexible CMS for custom sites.",
+  },
+
+  {
+    icon: <SiPhp size={40} className="text-[#4F5D95]" />,
+    title: "PHP ",
+    curent: false,
+    description: "Backend scripting for dynamic sites.",
+  },
+  {
+    icon: <SiMysql size={40} className="text-[#00758F]" />,
+    title: "MySQL ",
+    curent: false,
+    description: "Structured database management.",
+  },
+  {
+    icon: <SiGraphql size={40} className="text-[#E10098]" />,
+    title: "GraphQL ",
+    curent: false,
+    description: "Query language for flexible APIs.",
   },
 ];
 

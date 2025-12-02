@@ -12,7 +12,7 @@ const NotFoundPage = () => {
       <p className="text-white mb-6">
         Sorry, the page you are looking for does not exist or has been moved.
       </p>
-      <Link href="/">
+      <Link prefetch href="/">
         <p className="px-6 py-3 bg-teal-500 text-white text-sm font-medium rounded-md hover:bg-teal-600 transition-colors">
           Go Back Home
         </p>

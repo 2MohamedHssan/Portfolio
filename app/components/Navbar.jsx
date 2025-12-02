@@ -33,6 +33,7 @@ export default function Navbar() {
     { name: "Projects", href: "#Projects" },
     { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#Contact" },
+    { name: "Animation", href: "/animations" },
   ];
 
   const menuVariants = {
@@ -74,9 +75,14 @@ export default function Navbar() {
       />
 
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link href="/">
+        <Link prefetch href="/">
           <div className="relative w-12 h-12">
-             <Image src="/logo.WebP" fill alt="logo" className="object-contain" />
+            <Image
+              src="/logo.WebP"
+              fill
+              alt="logo"
+              className="object-contain"
+            />
           </div>
         </Link>
 
@@ -85,6 +91,7 @@ export default function Navbar() {
           {menuItems.map((item) => (
             <li key={item.name}>
               <Link
+                prefetch
                 href={item.href}
                 className="text-gray-300 hover:text-cyan-400 transition-colors text-sm uppercase tracking-wider font-medium relative group"
               >
@@ -111,7 +118,11 @@ export default function Navbar() {
               className="w-4 h-0.5 bg-purple-500 block"
             />
             <motion.span
-              animate={open ? { rotate: -45, y: -6, width: "100%" } : { rotate: 0, y: 0, width: "50%" }}
+              animate={
+                open
+                  ? { rotate: -45, y: -6, width: "100%" }
+                  : { rotate: 0, y: 0, width: "50%" }
+              }
               className="h-0.5 bg-cyan-400 block origin-center"
             />
           </div>
@@ -131,6 +142,7 @@ export default function Navbar() {
                 {menuItems.map((item) => (
                   <motion.li key={item.name} variants={itemVariants}>
                     <Link
+                      prefetch
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className="text-xl text-gray-300 hover:text-cyan-400 font-medium"
