@@ -96,7 +96,7 @@ function Experience() {
       date: "September 2023 - September 2024",
       description:
         "Provided technical support, troubleshooting hardware and software issues, and maintaining network infrastructure.",
-      tech: ["IT", "Network +", "Comptea A", "CCNA"],
+      tech: ["IT", "Network +", "Comptia A", "CCNA"],
       side: "right",
     },
   ];
