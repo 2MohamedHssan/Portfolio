@@ -4,9 +4,13 @@ import { useState, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../data";
+import { MdUnfoldMore } from "react-icons/md";
+
 import { useInView } from "react-intersection-observer";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 function Projects() {
+  const [more, setMore] = useState(true);
   const [activeCategory, setActiveCategory] = useState("All");
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
@@ -33,9 +37,9 @@ function Projects() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -43,9 +47,11 @@ function Projects() {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.4 }
-    }
+      transition: { duration: 0.4 },
+    },
   };
+
+  const newProjects = more ? filteredProjects.slice(0, 9) : filteredProjects;
 
   return (
     <section
@@ -67,10 +73,14 @@ function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Projects</span>
+            Latest{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+              Projects
+            </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
-            A showcase of my recent work, featuring web applications, games, and responsive designs.
+            A showcase of my recent work, featuring web applications, games, and
+            responsive designs.
           </p>
 
           <div className="flex flex-wrap justify-center items-center gap-3 mb-12">
@@ -89,7 +99,6 @@ function Projects() {
             ))}
           </div>
         </motion.div>
-
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -97,7 +106,7 @@ function Projects() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, index) => (
+            {newProjects.map((project, index) => (
               <motion.div
                 layout
                 key={project.pname || index} // Use a unique ID if available, fallback to index might cause issues with reordering but acceptable here if pname is unique
@@ -107,12 +116,7 @@ function Projects() {
                 exit="hidden"
                 className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 flex flex-col h-full"
               >
-                <a
-                  target="_blank"
-                  href={project.url}
-                  rel="noopener noreferrer"
-                  className="relative block h-56 overflow-hidden"
-                >
+                <div className={`relative block h-56 overflow-hidden`}>
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10" />
                   <Image
                     className="object-cover w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-110"
@@ -124,32 +128,60 @@ function Projects() {
                   <div className="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-white border border-white/10">
                     {project.category}
                   </div>
-                </a>
-
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {project.pname}
-                  </h3>
-                  
-                  <div className="mt-auto flex flex-wrap gap-2">
-                    {project.tools.map((tool, i) => (
-                      <span
-                        key={i}
-                        className="px-2 py-1 text-xs font-medium text-cyan-300 bg-cyan-900/20 border border-cyan-500/20 rounded-md"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
                 </div>
+
+                <div className="flex w-full justify-between items-center">
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {project.pname}
+                    </h3>
+
+                    <div className="mt-auto flex flex-wrap gap-2">
+                      {project.tools.map((tool, i) => (
+                        <span
+                          key={i}
+                          className="px-2 py-1 text-xs font-medium text-cyan-300 bg-cyan-900/20 border border-cyan-500/20 rounded-md"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  {!project.note && (
+                    <a
+                      target="_blank"
+                      title="View Demo"
+                      href={project.url}
+                      rel="noopener noreferrer"
+                      className="w-20 flex justify-center items-center"
+                    >
+                      <BsBoxArrowUpRight
+                        size={20}
+                        className="inline-block ml-1 hover:scale-110 cursor-pointer duration-300"
+                      />
+                    </a>
+                  )}
+                </div>
+                {project.note && (
+                  <p className="text-amber-400 px-4 py-2 border-t border-amber-400/50">
+                    Note: {project.note}
+                  </p>
+                )}
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
+        {filteredProjects.length > 9 && (
+          <p
+            onClick={() => setMore(!more)}
+            className="mx-auto w-fit my-6 flex gap-2 items-center bg-gray-900 text-white rounded-lg px-2 py-1 cursor-pointer"
+          >
+            {more ? "More" : "Less"} <MdUnfoldMore />
+          </p>
+        )}
       </div>
     </section>
   );
 }
 
 export default Projects;
-

@@ -13,6 +13,7 @@ function CurentSkills() {
       "HTML5",
       "CSS3",
       "JavaScript",
+      "React Query",
       "React",
       "Next.js",
       "TypeScript",
@@ -26,12 +27,13 @@ function CurentSkills() {
       "Express.js",
       "MongoDB",
       "PHP",
+      "Supabase",
       "MySQL",
       "Strapi",
       "WordPress",
       "GraphQL",
     ],
-    Tools: ["Git", "GitHub", "Jest", "Zod", "Playwright"],
+    Tools: ["Git", "GSAP", "GitHub", "Jest", "Zod", "Playwright"],
   };
 
   const getCategory = (title) => {

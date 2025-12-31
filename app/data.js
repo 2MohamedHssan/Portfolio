@@ -14,6 +14,10 @@ import {
   SiTypescript,
   SiNextdotjs,
   SiBootstrap,
+  SiSupabase,
+  SiReactquery,
+  SiGatsby,
+  SiGreensock,
 } from "react-icons/si";
 import { DiHtml5, DiCss3, DiJsBadge, DiReact } from "react-icons/di";
 import Image from "next/image";
@@ -91,10 +95,24 @@ export const skills = [
     description: "Semantic structure and accessibility.",
   },
   {
+    icon: <SiReactquery size={40} className="text-[#FF4154]" />,
+    title: "React Query",
+    curent: true,
+    description:
+      "Server-state management with caching and automatic data synchronization.",
+  },
+  {
     icon: <SiJest size={40} className="text-[#e35b64]" />,
     title: "Jest",
     curent: true,
     description: "Unit testing framework for JavaScript.",
+  },
+  {
+    icon: <SiGreensock size={40} className="text-[#88CE02]" />,
+    title: "GSAP",
+    current: true,
+    description:
+      "High-performance JavaScript animations with precise timeline control.",
   },
   {
     icon: <PlaywrightSVG size={40} />,
@@ -176,6 +194,12 @@ export const skills = [
     description: "JavaScript runtime for servers.",
   },
   {
+    icon: <SiSupabase size={40} className="text-[#339933]" />,
+    title: "Supabase",
+    curent: true,
+    description: "Back End As A Servece.",
+  },
+  {
     icon: <SiExpress size={40} className="text-white" />,
     title: "Express.js",
     curent: false,
@@ -206,12 +230,12 @@ export const skills = [
     curent: false,
     description: "Structured database management.",
   },
-  {
-    icon: <SiGraphql size={40} className="text-[#E10098]" />,
-    title: "GraphQL ",
-    curent: false,
-    description: "Query language for flexible APIs.",
-  },
+  // {
+  //   icon: <SiGraphql size={40} className="text-[#E10098]" />,
+  //   title: "GraphQL ",
+  //   curent: false,
+  //   description: "Query language for flexible APIs.",
+  // },
 ];
 
 export const projects = [
@@ -221,6 +245,23 @@ export const projects = [
     imgsrc: "/Tech.png",
     pname: "TECH YARD HUB ",
     category: "Reactjs",
+    note: "",
+  },
+  {
+    url: "#",
+    tools: ["Next.js", "Tailwind", "Supabase"],
+    imgsrc: "/playo_estimator.png",
+    pname: "Playo Estimatro",
+    category: "Nextjs",
+    note: "Private project — public access is not available",
+  },
+  {
+    url: "https://gsap-cocktails-vert-gamma.vercel.app/",
+    tools: ["React.js", "Tailwind", "GSAP"],
+    imgsrc: "/cocktail.png",
+    pname: "BRAND AGENCY ",
+    category: "Reactjs",
+    note: "",
   },
   {
     url: "https://byload-uae.com/",
@@ -228,6 +269,7 @@ export const projects = [
     imgsrc: "/Byload.png",
     pname: "Bylaod ",
     category: "Reactjs",
+    note: "",
   },
   {
     url: "#",
@@ -235,13 +277,15 @@ export const projects = [
     imgsrc: "/dashbordTech.png",
     pname: "Dashbord ",
     category: "Reactjs",
+    note: "Private project — public access is not available",
   },
   {
     url: "https://dfm-analyzer.vercel.app/",
-    tools: ["React.js", "Tailwind"],
+    tools: ["React.js", "Tailwind", "AI Modle", "Clerk"],
     imgsrc: "/DFM.png",
     pname: "DFM Analyzer ",
     category: "Reactjs",
+    note: "Private project — public access is not available",
   },
   {
     url: "https://2mohamedhssan.github.io/EliteCorp/",
@@ -249,6 +293,7 @@ export const projects = [
     pname: "EliteCorp",
     tools: ["HTML5", "TailwindCss", "JavaScript"],
     category: "JavaScript",
+    note: "",
   },
   {
     url: "https://2mohamedhssan.github.io/Bondi/",
@@ -256,6 +301,7 @@ export const projects = [
     tools: ["HTML5", "CSS3"],
     pname: "Bondi",
     category: "HTML&CSS",
+    note: "",
   },
   {
     url: "https://2mohamedhssan.github.io/First-JsDesign/",
@@ -263,6 +309,7 @@ export const projects = [
     tools: ["HTML5", "CSS3", "JavaScript"],
     pname: "JsDesign",
     category: "JavaScript",
+    note: "",
   },
   {
     url: "https://2mohamedhssan.github.io/Dashboard-Design/index.html",
@@ -270,6 +317,7 @@ export const projects = [
     imgsrc: "/dashbord.png",
     pname: "Dashboard",
     category: "HTML&CSS",
+    note: "",
   },
   {
     url: "https://github.com/2MohamedHssan/Next-app",
@@ -277,6 +325,7 @@ export const projects = [
     imgsrc: "/tow.jpg",
     pname: "Next-app",
     category: "Nextjs",
+    note: "",
   },
   {
     url: "https://2mohamedhssan.github.io/Clipboard/",
@@ -284,6 +333,7 @@ export const projects = [
     tools: ["HTML5", "TailwindCss"],
     pname: "Clipboard",
     category: "HTML&CSS",
+    note: "",
   },
   {
     url: "https://2mohamedhssan.github.io/Kasper-Design/",
@@ -291,6 +341,7 @@ export const projects = [
     tools: ["HTML5", "CSS3"],
     pname: "Kasper",
     category: "HTML&CSS",
+    note: "",
   },
   {
     url: "https://2mohamedhssan.github.io/First-Software-design/",
@@ -298,6 +349,7 @@ export const projects = [
     imgsrc: "/profirst.png",
     pname: "Company-portfolio",
     category: "HTML&CSS",
+    note: "",
   },
   {
     url: "https://2mohamedhssan.github.io/Awesome-Design/",
@@ -305,6 +357,7 @@ export const projects = [
     imgsrc: "/tempthree.png",
     pname: "Design",
     category: "HTML&CSS",
+    note: "",
   },
   {
     url: "https://telmeez-platform.vercel.app/",
@@ -312,6 +365,7 @@ export const projects = [
     imgsrc: "/telmeez.png",
     pname: "Telmeez",
     category: "Nextjs",
+    note: "",
   },
   {
     url: "https://portfolio-v418.vercel.app/",
@@ -319,6 +373,7 @@ export const projects = [
     imgsrc: "/newportoflio.png",
     pname: "myPortoflio",
     category: "Nextjs",
+    note: "",
   },
   {
     url: "https://github.com/2MohamedHssan/DepoTask",
@@ -326,6 +381,7 @@ export const projects = [
     imgsrc: "/one.jpg",
     pname: "DepoTask",
     category: "Reactjs",
+    note: "",
   },
   {
     url: "https://github.com/2MohamedHssan/Courses-front",
@@ -333,6 +389,7 @@ export const projects = [
     imgsrc: "/four.jpg",
     pname: "Courses-front",
     category: "Reactjs",
+    note: "",
   },
   {
     url: "https://github.com/2MohamedHssan/Image-Gallery-app",
@@ -340,6 +397,7 @@ export const projects = [
     imgsrc: "/six.jpg",
     pname: "Image-Gallery-app",
     category: "Reactjs",
+    note: "",
   },
   {
     url: "https://2mohamedhssan.github.io/Memory-Game/",
@@ -347,6 +405,7 @@ export const projects = [
     imgsrc: "/Memory.png",
     pname: "Memory-Game",
     category: "Games",
+    note: "",
   },
   {
     url: "https://2mohamedhssan.github.io/Hangman-Game/",
@@ -354,6 +413,7 @@ export const projects = [
     imgsrc: "/Hangman.png",
     pname: "Hangman-Game",
     category: "Games",
+    note: "",
   },
   {
     url: "https://2mohamedhssan.github.io/TypingRace-Game/",
@@ -361,6 +421,7 @@ export const projects = [
     imgsrc: "/typing.png",
     pname: "TypingRace-Game",
     category: "Games",
+    note: "",
   },
   {
     url: "https://2mohamedhssan.github.io/Question-Game/",
@@ -368,5 +429,6 @@ export const projects = [
     imgsrc: "/Qustion.png",
     pname: "Qustion-Game",
     category: "Games",
+    note: "",
   },
 ];
