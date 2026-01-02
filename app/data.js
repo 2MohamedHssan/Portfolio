@@ -312,6 +312,14 @@ export const projects = [
     note: "",
   },
   {
+    url: "https://awwwords-winning-website.vercel.app/",
+    imgsrc: "/zentry.png",
+    tools: ["React", "TailwindCss", "GSAP"],
+    pname: "Awwwrds Winning",
+    category: "Reactjs",
+    note: "",
+  },
+  {
     url: "https://2mohamedhssan.github.io/Dashboard-Design/index.html",
     tools: ["HTML5", "CSS3"],
     imgsrc: "/dashbord.png",
@@ -341,6 +349,14 @@ export const projects = [
     tools: ["HTML5", "CSS3"],
     pname: "Kasper",
     category: "HTML&CSS",
+    note: "",
+  },
+  {
+    url: "https://task-shopping-landing.vercel.app/",
+    imgsrc: "/Wirframe.png",
+    tools: ["React", "TailwindCss", "Fake-API"],
+    pname: "E-commerce Wireframing",
+    category: "Reactjs",
     note: "",
   },
   {

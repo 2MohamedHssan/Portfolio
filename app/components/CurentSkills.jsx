@@ -3,6 +3,7 @@ import React from "react";
 import { skills } from "../data";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import AnimatedBox from "./AnimatedBox";
 
 function CurentSkills() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -120,38 +121,40 @@ function CurentSkills() {
                     className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
                   >
                     {categorySkills.map((skill, index) => (
-                      <motion.div
-                        key={index}
-                        variants={itemVariants}
-                        whileHover={{ scale: 1.05, y: -5 }}
-                        className={`group relative p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col items-center text-center ${
-                          skill.curent
-                            ? "shadow-[0_0_15px_rgba(34,211,238,0.1)]"
-                            : ""
-                        }`}
-                      >
-                        {skill.curent && (
-                          <div
-                            className="absolute top-2 right-2 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
-                            title="Currently Using"
-                          />
-                        )}
+                      <AnimatedBox key={index}>
+                        <motion.div
+                          key={index}
+                          variants={itemVariants}
+                          whileHover={{ scale: 1.05, y: -5 }}
+                          className={`group relative p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col items-center text-center ${
+                            skill.curent
+                              ? "shadow-[0_0_15px_rgba(34,211,238,0.1)]"
+                              : ""
+                          }`}
+                        >
+                          {skill.curent && (
+                            <div
+                              className="absolute top-2 right-2 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
+                              title="Currently Using"
+                            />
+                          )}
 
-                        <div className="mb-4 p-3 rounded-lg bg-gray-800/50 group-hover:bg-gray-800 transition-colors">
-                          <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
-                            {skill.icon}
+                          <div className="mb-4 p-3 rounded-lg bg-gray-800/50 group-hover:bg-gray-800 transition-colors">
+                            <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                              {skill.icon}
+                            </div>
                           </div>
-                        </div>
 
-                        <h4 className="font-semibold text-gray-200 mb-1 group-hover:text-cyan-400 transition-colors">
-                          {skill.title}
-                        </h4>
+                          <h4 className="font-semibold text-gray-200 mb-1 group-hover:text-cyan-400 transition-colors">
+                            {skill.title}
+                          </h4>
 
-                        {/* Tooltip-like description on hover could go here, or just keep it clean */}
-                        <p className="text-xs text-gray-500 line-clamp-2">
-                          {skill.description}
-                        </p>
-                      </motion.div>
+                          {/* Tooltip-like description on hover could go here, or just keep it clean */}
+                          <p className="text-xs text-gray-500 line-clamp-2">
+                            {skill.description}
+                          </p>
+                        </motion.div>
+                      </AnimatedBox>
                     ))}
                   </motion.div>
                 </div>

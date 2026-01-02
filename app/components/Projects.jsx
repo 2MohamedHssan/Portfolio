@@ -8,6 +8,7 @@ import { MdUnfoldMore } from "react-icons/md";
 
 import { useInView } from "react-intersection-observer";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import AnimatedBox from "./AnimatedBox";
 
 function Projects() {
   const [more, setMore] = useState(true);
@@ -107,67 +108,70 @@ function Projects() {
         >
           <AnimatePresence mode="popLayout">
             {newProjects.map((project, index) => (
-              <motion.div
-                layout
+              <AnimatedBox
                 key={project.pname || index} // Use a unique ID if available, fallback to index might cause issues with reordering but acceptable here if pname is unique
-                variants={itemVariants}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 flex flex-col h-full"
               >
-                <div className={`relative block h-56 overflow-hidden`}>
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10" />
-                  <Image
-                    className="object-cover w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-110"
-                    src={project.imgsrc}
-                    width={500}
-                    height={300}
-                    alt={project.pname}
-                  />
-                  <div className="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-white border border-white/10">
-                    {project.category}
-                  </div>
-                </div>
-
-                <div className="flex w-full justify-between items-center">
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {project.pname}
-                    </h3>
-
-                    <div className="mt-auto flex flex-wrap gap-2">
-                      {project.tools.map((tool, i) => (
-                        <span
-                          key={i}
-                          className="px-2 py-1 text-xs font-medium text-cyan-300 bg-cyan-900/20 border border-cyan-500/20 rounded-md"
-                        >
-                          {tool}
-                        </span>
-                      ))}
+                <motion.div
+                  layout
+                  variants={itemVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 flex flex-col h-full"
+                >
+                  <div className={`relative block h-56 overflow-hidden`}>
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10" />
+                    <Image
+                      className="object-cover w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-110"
+                      src={project.imgsrc}
+                      width={500}
+                      height={300}
+                      alt={project.pname}
+                    />
+                    <div className="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-white border border-white/10">
+                      {project.category}
                     </div>
                   </div>
-                  {!project.note && (
-                    <a
-                      target="_blank"
-                      title="View Demo"
-                      href={project.url}
-                      rel="noopener noreferrer"
-                      className="w-20 flex justify-center items-center"
-                    >
-                      <BsBoxArrowUpRight
-                        size={20}
-                        className="inline-block ml-1 hover:scale-110 cursor-pointer duration-300"
-                      />
-                    </a>
+
+                  <div className="flex w-full justify-between items-center">
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                        {project.pname}
+                      </h3>
+
+                      <div className="mt-auto flex flex-wrap gap-2">
+                        {project.tools.map((tool, i) => (
+                          <span
+                            key={i}
+                            className="px-2 py-1 text-xs font-medium text-cyan-300 bg-cyan-900/20 border border-cyan-500/20 rounded-md"
+                          >
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    {!project.note && (
+                      <a
+                        target="_blank"
+                        title="View Demo"
+                        href={project.url}
+                        rel="noopener noreferrer"
+                        className="w-20 flex justify-center items-center"
+                      >
+                        <BsBoxArrowUpRight
+                          size={20}
+                          className="inline-block ml-1 hover:scale-110 cursor-pointer duration-300"
+                        />
+                      </a>
+                    )}
+                  </div>
+                  {project.note && (
+                    <p className="text-amber-400 px-4 py-2 border-t border-amber-400/50">
+                      Note: {project.note}
+                    </p>
                   )}
-                </div>
-                {project.note && (
-                  <p className="text-amber-400 px-4 py-2 border-t border-amber-400/50">
-                    Note: {project.note}
-                  </p>
-                )}
-              </motion.div>
+                </motion.div>
+              </AnimatedBox>
             ))}
           </AnimatePresence>
         </motion.div>

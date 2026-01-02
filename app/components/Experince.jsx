@@ -10,6 +10,7 @@ import {
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import AnimatedBox from "./AnimatedBox";
 
 function Experience() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -137,42 +138,44 @@ function Experience() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-32">
           {stats.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: item.delay }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className={`relative group p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 ${item.border} transition-all duration-300 flex flex-col items-center text-center`}
-            >
-              <div
-                className={`mb-6 p-4 rounded-full bg-gray-800/50 ${item.color} shadow-lg ${item.shadow}`}
+            <AnimatedBox key={index}>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: item.delay }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className={`relative group p-8 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800 ${item.border} transition-all duration-300 flex flex-col items-center text-center`}
               >
-                {item.icon}
-              </div>
-
-              <h3 className="text-5xl font-bold text-white mb-2">
-                {inView ? (
-                  <CountUp
-                    start={0}
-                    end={item.count}
-                    duration={2.5}
-                    separator=","
-                  />
-                ) : (
-                  0
-                )}
-                <span
-                  className={`text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500`}
+                <div
+                  className={`mb-6 p-4 rounded-full bg-gray-800/50 ${item.color} shadow-lg ${item.shadow}`}
                 >
-                  {item.suffix || ""}
-                </span>
-              </h3>
+                  {item.icon}
+                </div>
 
-              <p className="text-gray-400 font-medium text-lg tracking-wide uppercase">
-                {item.label}
-              </p>
-            </motion.div>
+                <h3 className="text-5xl font-bold text-white mb-2">
+                  {inView ? (
+                    <CountUp
+                      start={0}
+                      end={item.count}
+                      duration={2.5}
+                      separator=","
+                    />
+                  ) : (
+                    0
+                  )}
+                  <span
+                    className={`text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500`}
+                  >
+                    {item.suffix || ""}
+                  </span>
+                </h3>
+
+                <p className="text-gray-400 font-medium text-lg tracking-wide uppercase">
+                  {item.label}
+                </p>
+              </motion.div>
+            </AnimatedBox>
           ))}
         </div>
 

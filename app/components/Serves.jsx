@@ -6,6 +6,7 @@ import { BsPalette } from "react-icons/bs";
 import { IoPulseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import AnimatedBox from "./AnimatedBox";
 
 export default function Serves() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -18,7 +19,7 @@ export default function Serves() {
         "I provide professional web development services to bring your ideas to life with modern, responsive, and user-friendly websites. My expertise ensures seamless functionality and appealing designs that cater to your business needs.",
       color: "text-cyan-400",
       bg: "group-hover:bg-cyan-500/10",
-      border: "group-hover:border-cyan-500/50"
+      border: "group-hover:border-cyan-500/50",
     },
     {
       icon: <BsPalette size={50} />,
@@ -27,7 +28,7 @@ export default function Serves() {
         "I offer professional graphic design services to help businesses and individuals communicate visually and leave a lasting impression. From branding to digital and print designs, I focus on creating impactful and aesthetically pleasing visuals that align with your goals.",
       color: "text-purple-400",
       bg: "group-hover:bg-purple-500/10",
-      border: "group-hover:border-purple-500/50"
+      border: "group-hover:border-purple-500/50",
     },
     {
       icon: <FaNetworkWired size={40} />,
@@ -36,7 +37,7 @@ export default function Serves() {
         "As an IT Specialist, I ensure reliable, secure, and efficient technology systems to support your business operations. From troubleshooting and network management to infrastructure setup and cybersecurity, I bring technical expertise and problem-solving skills that keep your systems running smoothly.",
       color: "text-blue-400",
       bg: "group-hover:bg-blue-500/10",
-      border: "group-hover:border-blue-500/50"
+      border: "group-hover:border-blue-500/50",
     },
     {
       icon: <IoPulseOutline size={40} />,
@@ -45,7 +46,7 @@ export default function Serves() {
         "I provide SEO services to improve your website’s visibility on search engines. I use Google Search Console to ensure proper indexing and help your site appear faster in search results. My focus is on boosting your ranking and attracting more organic traffic.",
       color: "text-teal-400",
       bg: "group-hover:bg-teal-500/10",
-      border: "group-hover:border-teal-500/50"
+      border: "group-hover:border-teal-500/50",
     },
   ];
 
@@ -54,9 +55,9 @@ export default function Serves() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -64,8 +65,8 @@ export default function Serves() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
@@ -89,10 +90,14 @@ export default function Serves() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Services</span>
+            My{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+              Services
+            </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Comprehensive solutions tailored to elevate your digital presence and business operations.
+            Comprehensive solutions tailored to elevate your digital presence
+            and business operations.
           </p>
         </motion.div>
 
@@ -103,28 +108,31 @@ export default function Serves() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {services.map((service, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ y: -10 }}
-              className={`group relative p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 ${service.border} transition-all duration-300 flex flex-col h-full`}
-            >
-              <div className={`mb-6 p-4 rounded-xl bg-gray-800/50 w-fit ${service.color} ${service.bg} transition-colors duration-300`}>
-                {service.icon}
-              </div>
-              
-              <h3 className="text-2xl font-bold mb-4 text-gray-100 group-hover:text-white transition-colors">
-                {service.titel}
-              </h3>
-              
-              <p className="text-gray-400 leading-relaxed mb-6 flex-grow">
-                {service.descrption}
-              </p>
-              
-              <button className="w-full py-3 px-6 rounded-xl bg-gray-800 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500 text-white font-medium transition-all duration-300 border border-gray-700 hover:border-transparent">
-                Read More
-              </button>
-            </motion.div>
+            <AnimatedBox key={index}>
+              <motion.div
+                variants={itemVariants}
+                whileHover={{ y: -10 }}
+                className={`group relative p-8 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 ${service.border} transition-all duration-300 flex flex-col h-full`}
+              >
+                <div
+                  className={`mb-6 p-4 rounded-xl bg-gray-800/50 w-fit ${service.color} ${service.bg} transition-colors duration-300`}
+                >
+                  {service.icon}
+                </div>
+
+                <h3 className="text-2xl font-bold mb-4 text-gray-100 group-hover:text-white transition-colors">
+                  {service.titel}
+                </h3>
+
+                <p className="text-gray-400 leading-relaxed mb-6 flex-grow">
+                  {service.descrption}
+                </p>
+
+                <button className="w-full py-3 px-6 rounded-xl bg-gray-800 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500 text-white font-medium transition-all duration-300 border border-gray-700 hover:border-transparent">
+                  Read More
+                </button>
+              </motion.div>
+            </AnimatedBox>
           ))}
         </motion.div>
       </div>
