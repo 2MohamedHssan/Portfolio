@@ -248,6 +248,14 @@ export const projects = [
     note: "",
   },
   {
+    url: "https://swtyweg.com",
+    tools: ["Next.js", "Tailwind"],
+    imgsrc: "/swtyw.png",
+    pname: "SWTYW",
+    category: "Nextjs",
+    note: "",
+  },
+  {
     url: "#",
     tools: ["Next.js", "Tailwind", "Supabase"],
     imgsrc: "/playo_estimator.png",
