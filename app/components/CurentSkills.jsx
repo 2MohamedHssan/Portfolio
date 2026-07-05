@@ -31,7 +31,7 @@ function CurentSkills() {
       "Supabase",
       "MySQL",
       "Strapi",
-      "WordPress",
+      // "WordPress",
       "GraphQL",
     ],
     Tools: ["Git", "GSAP", "GitHub", "Jest", "Zod", "Playwright"],

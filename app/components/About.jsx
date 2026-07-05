@@ -22,7 +22,7 @@ const About = () => {
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   const stats = [
-    { label: "Years Experience", value: "1+" },
+    { label: "Years Experience", value: "1.5+" },
     { label: "Projects Completed", value: "20+" },
     { label: "Happy Clients", value: "10+" },
   ];

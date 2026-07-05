@@ -48,25 +48,99 @@ function Skills({ value }) {
   }, [value]);
 
   const icons = [
-    <DiHtml5 className="icon-glow hover:text-[#e34c26] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiZod className="icon-glow hover:text-[#3B82F6] transition-colors duration-300" color="#6b7280" size={30} />,
-    <DiCss3 className="icon-glow hover:text-[#1572b6] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiStrapi className="icon-glow hover:text-[#1572b6] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiRedux className="icon-glow hover:text-[#764ABC] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiWordpress className="icon-glow hover:text-[#1572b6] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiJest className="icon-glow hover:text-[#e35b64] transition-colors duration-300" color="#6b7280" size={30} />,
-    <FaGithub className="icon-glow hover:text-[#ffffff] transition-colors duration-300" color="#6b7280" size={30} />,
-    <DiJsBadge className="icon-glow hover:text-[#f7df1e] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiPhp className="icon-glow hover:text-[#4F5D95] transition-colors duration-300" color="#6b7280" size={30} />,
-    <DiReact className="icon-glow hover:text-[#61dbfb] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiTailwindcss className="icon-glow hover:text-[#38B2AC] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiTypescript className="icon-glow hover:text-[#3178C6] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiNextdotjs className="icon-glow hover:text-[#ffffff] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiBootstrap className="icon-glow hover:text-[#7952B3] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiNodedotjs className="icon-glow hover:text-[#339933] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiExpress className="icon-glow hover:text-[#ffffff] transition-colors duration-300" color="#6b7280" size={30} />,
-    <SiMongodb className="icon-glow hover:text-[#4DB33D] transition-colors duration-300" color="#6b7280" size={30} />,
-    <Image src="/logo.svg" alt="vite" width={30} height={30} className="opacity-50 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0" />,
+    <DiHtml5
+      className="icon-glow hover:text-[#e34c26] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <SiZod
+      className="icon-glow hover:text-[#3B82F6] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <DiCss3
+      className="icon-glow hover:text-[#1572b6] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <SiStrapi
+      className="icon-glow hover:text-[#1572b6] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <SiRedux
+      className="icon-glow hover:text-[#764ABC] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    // <SiWordpress className="icon-glow hover:text-[#1572b6] transition-colors duration-300" color="#6b7280" size={30} />,
+    <SiJest
+      className="icon-glow hover:text-[#e35b64] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <FaGithub
+      className="icon-glow hover:text-[#ffffff] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <DiJsBadge
+      className="icon-glow hover:text-[#f7df1e] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <SiPhp
+      className="icon-glow hover:text-[#4F5D95] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <DiReact
+      className="icon-glow hover:text-[#61dbfb] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <SiTailwindcss
+      className="icon-glow hover:text-[#38B2AC] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <SiTypescript
+      className="icon-glow hover:text-[#3178C6] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <SiNextdotjs
+      className="icon-glow hover:text-[#ffffff] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <SiBootstrap
+      className="icon-glow hover:text-[#7952B3] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <SiNodedotjs
+      className="icon-glow hover:text-[#339933] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <SiExpress
+      className="icon-glow hover:text-[#ffffff] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <SiMongodb
+      className="icon-glow hover:text-[#4DB33D] transition-colors duration-300"
+      color="#6b7280"
+      size={30}
+    />,
+    <Image
+      src="/logo.svg"
+      alt="vite"
+      width={30}
+      height={30}
+      className="opacity-50 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+    />,
   ];
 
   return (

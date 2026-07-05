@@ -20,17 +20,19 @@ export default function Home() {
   const [introDone, setIntroDone] = useState(false);
   const [cycleStage, setCycleStage] = useState(0);
   const texts = ["Web Developer", "Problem Solver", "🚀 Let’s Go!"];
+
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
       setCycleStage(index);
+      index++;
       if (index === texts.length) {
         clearInterval(interval);
       }
-      index++;
     }, 100);
     return () => clearInterval(interval);
   }, []);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -63,7 +65,7 @@ export default function Home() {
 
   return (
     <>
-      {!introDone ? (
+      {!introDone ?
         <>
           <div className="w-screen h-screen flex justify-center items-center bg-black overflow-hidden">
             <div className=" w-full flex flex-col justify-center items-center py-10">
@@ -86,9 +88,7 @@ export default function Home() {
             {PageContent}
           </IntroMask>
         </>
-      ) : (
-        PageContent
-      )}
+      : PageContent}
     </>
   );
 }

@@ -22,6 +22,7 @@ function Projects() {
     "Reactjs",
     "Nextjs",
     "Games",
+    "Expo",
   ];
 
   const handleCategoryChange = useCallback((category) => {
