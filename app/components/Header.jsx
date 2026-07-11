@@ -34,10 +34,7 @@ export default function Header() {
             I am a{" "}
             <span className="text-cyan-400">
               <Typewriter
-                words={[
-                  "Full Stack Developer",
-                  "React & Next.js Expert",
-                ]}
+                words={["Full Stack Developer", "React & Next.js Expert"]}
                 loop={Infinity}
                 cursor={true}
                 cursorStyle="_"
@@ -47,15 +44,15 @@ export default function Header() {
               />
             </span>
           </div>
-          
+
           <p className="text-gray-400 text-lg max-w-lg mb-8 leading-relaxed">
-            Building digital experiences with modern technologies. 
-            Focused on creating accessible, pixel-perfect, and performant web applications.
+            Building digital experiences with modern technologies. Focused on
+            creating accessible, pixel-perfect, and performant web applications.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-8">
-             <motion.a
-              href="/Mohamed_Hassan.pdf"
+            <motion.a
+              href="/Mohamed Hassan.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -97,9 +94,9 @@ export default function Header() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           className="relative w-full h-[400px] md:h-[600px] flex items-center justify-center"
         >
-            {/* Glow effect behind the 3D model */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl transform scale-75" />
-            <HeroAnimation />
+          {/* Glow effect behind the 3D model */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl transform scale-75" />
+          <HeroAnimation />
         </motion.div>
       </div>
     </section>

@@ -28,9 +28,9 @@ function Experience() {
     },
     {
       icon: <FaBriefcase size={40} />,
-      count: 1.5,
+      count: 16,
       suffix: "+",
-      label: "Years Experience",
+      label: "Moths of Experience",
       color: "text-purple-400",
       border: "group-hover:border-purple-500/50",
       shadow: "shadow-purple-500/20",

@@ -9,7 +9,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Certification from "./components/Certification";
-// import Experince from "./components/Experince";
+import Experince from "./components/Experince";
 import Cookes from "./components/Cookes";
 import CurentSkills from "./components/CurentSkills";
 import IntroMask from "./components/Incoming";
@@ -54,7 +54,7 @@ export default function Home() {
       <Cookes />
       <About />
       <CurentSkills />
-      {/* <Experince /> */}
+      <Experince />
       <Certification />
       <Serves />
       <Projects />
